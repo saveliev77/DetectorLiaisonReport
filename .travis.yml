@@ -2,9 +2,8 @@ sudo: required
 dist: trusty
 services: docker
 script:
-- wget https://raw.githubusercontent.com/blang/latex-docker/master/latexdockercmd.sh
-- chmod +x latexdockercmd.sh
-- "./latexdockercmd.sh latexmk -cd -lualatex -bibtex -silent -f --synctex=1"
+- docker pull rekka/tectonic
+- docker run --mount src=$TRAVIS_BUILD_DIR/src,target=/usr/src/tex,type=bind rekka/tectonic tectonic lcDetectorRnD.tex
 deploy:
   provider: releases
   api_key:
