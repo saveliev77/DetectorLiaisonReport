@@ -2,7 +2,7 @@ sudo: required
 dist: trusty
 services: docker
 script:
-- docker run --rm -v $(pwd):/data -it blang/latex:ctanfull lualatex lcDetectorRnD.tex && biber lcDetectorRnd && lualatex lcDetectorRnD.tex && lualatex lcDetectorRnD.tex
+- docker run --rm -v $(pwd):/data -it blang/latex:ctanfull latexmk -cd -lualatex -bibtex -silent -f --synctex=1
 deploy:
   provider: releases
   api_key:
