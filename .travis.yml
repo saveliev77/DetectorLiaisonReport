@@ -2,8 +2,7 @@ sudo: required
 dist: trusty
 services: docker
 script:
-- docker pull rekka/tectonic
-- docker run --mount src=$TRAVIS_BUILD_DIR,target=/usr/src/tex,type=bind rekka/tectonic tectonic lcDetectorRnD.tex
+- docker run --rm -v $(pwd):/data -it hrektts/texlive ./compileLatex
 deploy:
   provider: releases
   api_key:
