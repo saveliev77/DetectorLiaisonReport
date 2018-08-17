@@ -1,0 +1,137 @@
+\documentclass[10pt,final]{report}
+\usepackage{fontspec}
+\usepackage{color}
+\usepackage{graphicx}
+\DeclareGraphicsExtensions{.png,.pdf,.jpg,.jpeg}
+\usepackage{subcaption}
+%%% The next two are necessary to get the degree symbol in text and math mode
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage{hyperref}
+\hypersetup{%
+  colorlinks = true,
+  linkcolor  = black,
+  urlcolor   = cyan,
+  plainpages = false,
+  pdfencoding = auto
+}
+\usepackage{siunitx}
+\sisetup{
+    range-phrase = --
+}
+% for chemical symbols, relevant for gas mixes, for example
+\usepackage[version=4]{mhchem}
+\usepackage{hepnames}
+%\SetMathAlphabet{\mathup}{bold}{OT1}{\familydefault}{bx}{n}
+
+\usepackage[mathrm=sym, mathup=sym, mathit=sym, mathsf=sym, mathbf=sym, mathtt=sym]{unicode-math}
+\defaultfontfeatures{Scale=MatchLowercase}
+\setmainfont{Linux Libertine O}
+\setsansfont{TeX Gyre Heros}
+\setmathfont{TeX Gyre Termes Math}
+\usepackage{pdfpages}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{pdflscape}
+\usepackage{multirow}
+\usepackage{adjustbox}
+\usepackage{geometry}
+\usepackage[backend=biber,sorting=none]{biblatex}
+\usepackage{xspace}
+
+\addbibresource{detectorRnD.bib}
+\DeclareBibliographyDriver{caliceanalysisnote}{%
+    \printnames{author}%
+    \newunit\newblock
+    \printfield{title}%
+    \newunit\newblock
+    \printfield{url}%
+    \finentry%
+}
+
+\DeclareBibliographyDriver{presentation}{%
+    \printnames{author}%
+    \newunit\newblock
+    \printfield{title}%
+    \newunit\newblock
+    \printfield{conference}%
+    \newunit\newblock
+    \printfield{location}%
+    \newunit\newblock
+    \printfield{year}%
+    \newunit\newblock
+    \printfield{url}%
+    \finentry%
+}
+
+\begin{document}
+\begin{titlepage}
+    \begin{center}
+        \textbf{\huge Detector R\&D Report}\\
+        \vspace{1.5cm}
+        \textbf{\Large Editors}\\
+        \textbf{\Large Jan Strube\qquad Maxim Titov} \\
+        jan.strube@pnnl.gov\qquad maxim.titov@cea.fr \\
+    \end{center}
+\end{titlepage}
+\tableofcontents
+\chapter{Vertex Detectors}
+\input{VertexDetector/Motivation}
+\input{VertexDetector/CMOS/CMOS}
+\input{VertexDetector/DEPFET/DEPFET}
+\input{VertexDetector/FPCCD/FPCCD}
+\input{VertexDetector/Chronopix/Chronopix}
+\input{VertexDetector/VIP/VIP}
+\input{VertexDetector/SOI/SOI}
+\input{VertexDetector/CLICPIX/CLICPix}
+\newpage
+\input{VertexDetector/PixelSummary}
+% \input{VertexDetector/ExecutiveSummary}
+\newpage
+\chapter{Silicon Trackers}
+\input{Tracker/Motivation}
+\input{Tracker/SCIPPTracking/SCIPPTracking}
+\input{Tracker/MicroStrips/MicroStrips}
+\input{Tracker/KPIX/KPIX}
+\input{Tracker/SiTrackingSummary}
+\chapter{Gaseous Trackers}
+% LCTPC collaboration spokesperson: Jochen Kaminski (email : kaminski@physik.uni-bonn.de)
+\input{Tracker/TPC_Bonn/TPC_Bonn}
+\input{Tracker/TPCSummary}
+\chapter{Calorimeters}
+\input{Calorimeter/Motivation}
+\input{Calorimeter/ScintillatorStrips/ScintillatorStrips}
+\input{Calorimeter/SiliconTungstenILD/SiliconPads}
+\input{Calorimeter/SiliconTungstenSiD/SiliconTungstenSiD}
+\input{Calorimeter/DECAL/DECAL}
+\input{Calorimeter/DHCAL/DHCAL}
+\input{Calorimeter/GEM_HCAL/GEM_HCAL}
+\input{Calorimeter/THGEM/THGEM}
+\input{Calorimeter/AHCAL/AHCAL}
+\input{Calorimeter/SDHCal/SDHCAL}
+\input{Calorimeter/SDHCAL_GRPC/SDHCAL_GRPC}
+\input{Calorimeter/DualReadout/DualReadout}
+\input{Calorimeter/CalorimeterSummary}
+\chapter{Forward Calorimeters}
+\input{Calorimeter/FCAL/Motivation}
+\input{Calorimeter/FCAL/FCAL}
+\input{Calorimeter/FCALSummary}
+\chapter{Muon Detector}
+\input{MuonDetector/Motivation}
+\input{MuonDetector/MuonDetectorILD/MuonDetectorILD}
+\input{MuonDetector/Scintillator/Scintillator}
+\input{MuonDetector/MuonSummary}
+\chapter{Software Tools}
+\input{Software/Introduction}
+\input{Software/LCIO/LCIO}
+% % \input{Software/LCSim/LCSim}
+\input{Software/DD4HEP/DD4HEP}
+\input{Software/Marlin/Marlin}
+\input{Software/PandoraPFA/PandoraPFA}
+\input{Software/LCFIPlus/LCFIPlus}
+\input{Software/SoftwareSummary}
+% \input{Software/Executive_Summary}
+\chapter{Spinoffs}
+\input{Spinoffs/Spinoffs}
+\printbibliography
+\end{document}

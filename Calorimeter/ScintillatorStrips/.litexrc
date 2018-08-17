@@ -1,0 +1,6 @@
+{
+  "project": {
+    "filename": "../../lcDetectorRnD.tex",
+    "commands": ["./compileLatex"]
+  }
+}

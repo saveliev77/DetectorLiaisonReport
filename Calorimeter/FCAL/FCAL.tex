@@ -1,0 +1,409 @@
+\section{FCAL}
+Most recent update: 2016-03-28 \\
+Contact person: Wolfgang Lohmann (email: Wolfgang.Lohmann@desy.de)
+\begin{figure}
+\begin{minipage}{\linewidth}
+    \begin{minipage}{.25\linewidth}
+\includegraphics[width=\textwidth]{Calorimeter/FCAL/LumiCalPic.png}
+    \end{minipage}
+        \begin{minipage}{.24\linewidth}
+            LumiCal: precise luminosity measurement $10^{-3}$\@ \SI{500}{GeV} ILC; $10^{-2}$ \@ \SI{3}{TeV} CLIC
+        \end{minipage}
+    \begin{minipage}{.25\linewidth}
+\includegraphics[width=\textwidth]{Calorimeter/FCAL/BeamCalPic.png}
+    \end{minipage}
+    \begin{minipage}{.24\linewidth}
+        BeamCal: inst. lumi measurement / beam tuning, beam diagnostic
+    \end{minipage}
+\begin{tabularx}{\textwidth}{lX}
+    {\color{red}LumiCal}: & Two Si6W sandwich EM calo at a $\approx\SI{2.5}{m}$ from the IP (both sides) 30/40 (ILC/CLIC) tungsten disks of \SI{3.5}{mm} thickness. \\
+    {\color{red}BeamCal}: & very high radiation load (up to \SI{1}{MGy} / year) $\rightarrow$ similar W6absorber, but radiation hard sensors (GaAs, CVD diamond) \\
+\end{tabularx}
+\end{minipage}
+\end{figure}
+
+\subsection{Introduction}
+Two special electromagnetic calorimeters are foreseen in the very forward regions of a linear collider detector, denoted hereafter as
+LumiCal and BeamCal.
+These calorimeters will deliver both a fast and a precise measurement of the luminosity
+and extend the detector coverage to low polar angles,
+important e.g. for new particle searches with missing energy signature.
+In addition, a LHCal extends the hadron calorimeter to very small polar angles.
+Detailed Monte Carlo studies have been performed to
+optimize the design of the calorimeters, estimate the background from physics processes and understand the impact
+of beam-beam interactions on the luminosity measurement~\cite{2010JInst...512002A}.
+A sketch of the design is shown in Figure~\ref{fig:Forward_structure}~(left).
+To ensure a high efficiency for single high energy electron detection on top of the large and widely spread
+background from beamstrahlung, calorimeters with a small Moli\`{e}re radius are needed. Such compact calorimeters facilitate
+also the reconstruction of Bhabha scattering events.
+\begin{figure}[hbp]
+  \centering
+   \includegraphics[width=0.45\columnwidth]{Calorimeter/FCAL/figs/forward_region_new} \hfill
+   \includegraphics[width=0.45\columnwidth]{Calorimeter/FCAL/figs/BClayer}
+  \caption{Left: The very forward region of the ILD detector.
+  LumiCal, BeamCal and LHCAL are carried by
+  the support tube for the final focusing quadrupole QD0 and the beam-pipe.
+  TPC denotes the central track chamber, ECAL the electromagnetic and
+  HCAL the hadron calorimeter.
+  Right: A half layer of an absorber disk with a sensor sector and front-end electronics.}
+  \label{fig:Forward_structure}
+\end{figure}
+Due to the high occupancy originating from beamstrahlung and two-photon processes,
+both calorimeters need a dedicated fast readout.
+In addition, the lower polar angle range of BeamCal is exposed to a large flux
+of low energy electrons, resulting in depositions up to one
+MGy per year. Hence, radiation hard sensors are needed.
+
+\subsection{Mechanical Concept}
+Since in both calorimeters a robust electron and photon shower measurement
+is essential, a small Moli\`{e}re radius will be preferable.
+Compact
+cylindrical sandwich
+calorimeters using tungsten absorber disks of one radiation length thickness, interspersed with
+finely segmented silicon (LumiCal) or GaAs (BeamCal) sensor planes, as sketched in
+Figure~\ref{fig:Forward_structure}~(right),
+are found
+to match the requirements from physics~\cite{2010JInst...512002A}.
+LHCal will be designed with a small hadronic interaction length, to fit into the limited space available.
+
+\subsection{Recent Milestones}
+Recent milestones were the publication of the performance of fully instrumented detector planes, and the beam-test of a four
+sensor-layer stack. The results on the performance are briefly summarized below.
+The data analysis for the four sensor-layer stack is still ongoing.
+
+\subsubsection{Currently used Sensors and ASICs}
+Large area GaAs sensors, as shown in Figure~\ref{fig:Calorimeter:FCAL:GaAs}, were developed
+and produced in collaboration with partners in industry. The Liquid Encapsulated
+Czochralski technology is used. The sensors were
+doped by a shallow donor (Sn or Te),
+and then compensated  with Chromium.
+% \begin{figure}[hbp]
+%     \centering
+%     \includegraphics[width=0.8\columnwidth]{Calorimeter/FCAL/figs/GaAs_sensor_new}
+%           \caption{A GaAs pad sensor developed for BeamCal.}
+%     \label{fig:Calorimeter:FCAL:GaAs}
+% \end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[width=.7\textwidth]{Calorimeter/FCAL/figs/BeamCal}
+    \caption{\color{red} Caption missing}
+    \label{fig:Calorimeter:FCAL:BeamCalChips}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[width=.4\textwidth]{Calorimeter/FCAL/figs/Hamamatsu_chip}\qquad
+    \includegraphics[width=.4\textwidth]{Calorimeter/FCAL/figs/LumiCal}
+    \caption{\color{red} Caption missing}
+    \label{fig:Calorimeter:FCAL:LumiCal}
+\end{figure}
+This results in a semi-insulating GaAs material with a resistivity of about $[10^7]{\Omega m}$.
+The sensors are \SI{0.5}{mm} thick with pads of a few mm$^2$ area. The operation voltage is about \SI{100}{V} with
+leakage current per pad less than \SI{500}{nA}.
+
+Prototypes of LumiCal sensors have been designed
+and manufactured by Hamamatsu
+Photonics.
+Their shape is a ring segment of 30$^\circ$.
+The thickness of the n-type silicon bulk is \SI{0.320}{mm}.
+The pitch of the concentric p$^+$ pads is \SI{1.8}{mm} and
+the gap between two pads is \SI{0.1}{mm}.
+The bias voltage for full depletion ranges between 39 and \SI{45}{V},
+and the leakage currents per pad are below \SI{5}{nA}~\cite{eudet2009}.
+
+Dedicated ASICs were designed choosing
+an
+architecture~\cite{Boie1982365,Gatti:1986qq}
+comprising a charge sensitive amplifier and a shaper.
+ASICs, containing 8 front--end channels, were designed and fabricated in \SI{0.35}{\micro\meter} CMOS technology.
+A variable gain in both the charge amplifier and
+the shaper is implemented by a mode switch. The peaking time of the shaper output signal is \SI{60}{ns}.
+More results of the measurements of the performance were published elsewhere~\cite{4600902}.
+A dedicated low-power, small-area, multichannel ADC is designed and produced~\cite{6156491}.
+It comprises eight 10-bit power and frequency (up to \SI{24}{MS/s}) scalable pipeline ADCs and the necessary
+auxiliary components.
+
+
+\subsection{Test-beam Results}
+
+\subsubsection{Performance of a Fully Instrumented  Detector Plane}
+
+Several test-beam campaigns were done to investigate the performance of single fully instrumented detector planes,
+both for LumiCal and BeamCal.
+Prototypes of sensor planes assembled with FE and ADC ASICs,
+as shown in Figure~\ref{fig:fcal_lumical_module_photo},
+were built using LumiCal and BeamCal sensors~\cite{1748-0221-7-01-T01004}.
+\begin{figure}[hbp]
+\centering
+\includegraphics[width=0.35\columnwidth,angle=90]{Calorimeter/FCAL/figs/tb3_complete_module}
+\caption{Photograph of a fully instrumented detector plane for FCAL.}
+\label{fig:fcal_lumical_module_photo}
+\end{figure}
+The detector plane prototypes were installed in an electron beam and
+the trajectories of beam particles were measured by four planes of a silicon strip
+telescope.
+The front-end electronics outputs were sampled synchronously with the
+beam clock, a mode used at the ILC.
+\begin{figure}[htpb]
+\centering
+  \includegraphics[width=0.45\columnwidth]{Calorimeter/FCAL/figs/StoN_AmplitudeMethod_TB11} \hfill
+  \includegraphics[width=0.45\columnwidth]{Calorimeter/FCAL/figs/hit_map_area1}
+  \caption{Left: The signal-to-noise ratio of all readout channels.
+          Right: Distribution of the predicted impact points on pads with a color coded signal.}
+\label{fig:sinalnoise}
+\end{figure}
+Data were taken for different pads and also for regions covering pad boundaries.
+Signal-to-noise ratios
+of better than 20 are measured for beam particles both for LumiCal and BeamCal sensors,
+as illustrated in Figure~\ref{fig:sinalnoise}~(left).
+The impact point on the sensor is reconstructed from the telescope information.
+Using a color code for the signals on the pads
+the structure of the sensor becomes nicely visible, as seen in Figure~\ref{fig:sinalnoise}~(right).
+The sensor response was found to be uniform over the pad area and to drop by about 10\% in the
+area between pads.
+
+\subsubsection{Preliminary results from a Multilayer Stack}
+
+In two test-beam campaigns at CERN and at DESY a stack instrumented with 4 detector planes was investigated in
+an electron and in a mixed particle beam.
+Different numbers of uniform absorber plates were positioned in front and in between the detector planes in each
+run, allowing to study the longitudinal and lateral shower development.
+The data were compared to a GEANT4 simulation. A preliminary result is shown in Figure~\ref{fig:shower_development}.
+\begin{figure}[hbp]
+\centering
+\includegraphics[width=0.6\columnwidth]{Calorimeter/FCAL/figs/long_shower}
+\caption{The mean charge read out for an electron shower as a function of the shower depth for data and Monte Carlo
+simulation.
+The mean charge is given in units of a mip response and the depth in units of a radiation length.  }
+\label{fig:shower_development}
+\end{figure}
+
+
+\subsection{Engineering Challenges}
+Engineering challenges within the current and future research within FCAL are the following:
+\begin{itemize}
+\item{A slim assembled sensor plane. The space between absorber planes must be kept as small
+as possible. The fan-out to move the signals from the sensor pads to the outside radius must be very thin and
+hence a new connectivity technology must be applied.}
+\item{Multichannel front-end and ADC ASICs for the prototype.
+A compromise must be found between integration, miniaturization and costs}.
+\item{Operation using power pulsing to avoid active cooling}.
+\item{A dedicated solution for data concentration, data reduction and transmission, allowing read out of
+the full calorimeters after each bunch crossing}.
+\item{Precise alignment and position monitoring. the inner radius of LumiCal has to be controlled within about \SI{10}{\micro\meter}, and the distance between the
+calorimeters on both sides of the IP within \SI{100}{\micro\meter}}.
+\item{Montage and demontage of the calorimeters must be done when the beam-pipe is installed. The calorimeters must be segmented at
+least in two half cylinders, and corresponding auxiliary mechanics has to be developed.}
+\end{itemize}
+
+\subsection{Future Plans}
+
+\subsubsection{Radiation Damage Studies}
+
+Two studies Two studies of the radiation tolerance of potential BeamCal sensors have been carried out. The
+radiation tolerance of prototype GaAs sensors has been explored by exposing the sensors
+to direct irradiation from a high-intensity electron beam of about \SI{10}{MeV}~\cite{sdalinac},
+which is an energy expected from beamstrahlung
+remnants at the ILC.
+It was found that the sensors can be operated at room temperature up
+to approximately \SI{1}{MGy} without a significant increase in the
+leakage current~\cite{1748-0221-7-11-P11022}; however, significant loss in the response to ionizing particles was observed.
+In addition, several different silicon-diode sensor technologies were exposed to varying levels
+of radiation induced by the SLAC End Station A Test Beam (ESTB).
+For this study, the ESTB test beam, with energies
+varying between 3 and \SI{11}{GeV}, was directed into a tungsten beam stop.
+The beam stop was split at the depth of the shower maximum
+and the sensor inserted,
+leading to an exposure incorporating the full spectrum of particle species that will
+irradiate the BeamCal sensors. Both n-type bulk oxygenated float-zone and magnetic Czochralski
+detectors were explored, with exposures varying from 0.2 to \SI{2.2}{MGy}.
+It was found that, after allowing for a short period of controlled annealing,
+all sensor types withstood the maximum dose that they received with little loss in response
+to ionizing particles~\cite{2014arXiv1402.2692B}, but with some increase in leakage current.
+However, the sensors have to be operated at temperatures below \SI{-10}{\degreeCelsius}.
+Further irradiation studies in the ESTB are planned for the future.
+The apparatus to measure the charge-collection efficiency  at the Santa Cruz Institute
+for Particle Physics is being adapted for the evaluation of pad sensors, which will allow for radiation
+damage studies of the prototype GaAs sensors in this realistic electromagnetic shower environment.
+Studies to push the silicon diode sensors to higher levels of irradiation are also planned.
+
+\subsubsection{Novel Sensor Materials}
+
+The performance of single crystal Sapphire sensors to detect minimum ionising particles has been studied for the
+first time~\cite{1748-0221-10-08-P08008}. Sapphire sensors are a promising alternative for GaAs to instrument
+the region near the beam-pipe where a high radiation field is expected.
+
+With Hamamatsu Photonics the design of
+edgeless silicon sensors is under preparation. Using edgeless sensors in LumiCal would avoid performance losses
+in gaps between sensor segments.
+
+
+
+% \subsubsection{Sensors and ASICs}
+% Large area GaAs sensors, as shown in Figure~\ref{fig:GaAs}, were developed
+% and produced in collaboration with partners in industry. The Liquid Encapsulated
+% Czochralski technology is used. The sensors were
+% doped by a shallow donor (Sn or Te),
+% and then compensated with Chromium.
+% \begin{figure}[hbp]
+% \begin{center}
+%     \includegraphics[width=0.8\columnwidth]{Calorimeter/FCAL/figs/GaAs_sensor_new.jpg}
+%   \end{center}
+%           \caption{A GaAs pad sensor developed for BeamCal.}
+%     \label{fig:GaAs}
+% \end{figure}
+% This results in a semi-insulating GaAs material with a resistivity of about $\SI{10^7}{\Omega m}$.
+% The sensors are \SI{0.5}{mm} thick with pads of a few mm$^2$ area. The operation voltage is about \SI{100}{V} with
+% leakage current per pad less than \SI{500}{nA}.
+%
+% Prototypes of LumiCal sensors have been designed
+% and manufactured by Hamamatsu
+% Photonics.
+% Their shape is a ring segment of 30$^\circ$.
+% The thickness of the n-type silicon bulk is \SI{0.320}{mm}.
+% The pitch of the concentric p$^+$ pads is \SI{1.8}{mm} and
+% the gap between two pads is \SI{0.1}{mm}.
+% The bias voltage for full depletion ranges between 39 and \SI{45}{V},
+% and the leakage currents per pad are below \SI{5}{nA}~\cite{eudet2009}.
+%
+% Dedicated ASICs were designed choosing
+% an
+% architecture~\cite{Boie1982365,Gatti:1986qq}
+% comprising a charge sensitive amplifier and a shaper.
+% ASICs, containing 8 front--end channels, were designed and fabricated in $\SI{0.35}{\micro\meter}$ CMOS technology.
+% A micro-graph of the prototype, glued and bonded on the PCB, is shown Figure~\ref{fig:frontend_photo}.
+% A variable gain in both the charge amplifier and
+% the shaper is implemented by a mode switch. The peaking time of the shaper output signal is \SI{60}{ns}.
+% More results of the measurements of the performance were published elsewhere~\cite{4600902}.
+% A dedicated low-power, small-area, multichannel ADC is designed and produced~\cite{6156491}.
+% \begin{figure}[hbp]
+% \begin{center}
+%  \begin{tabular}{rrr}
+%     \includegraphics[width=0.4\columnwidth]{Calorimeter/FCAL/figs/fcal_lumical_fe_photo}
+%      &~~~~~~&
+%  \includegraphics[width=0.4\textwidth,height=0.28\textwidth]{Calorimeter/FCAL/figs/adc_asic_photo.png} \\
+%
+% \end{tabular}
+%    \end{center}
+%           \caption{Left: Micrography of front-end ASIC.
+%                Right: Micrography of ADC ASIC.}
+%     \label{fig:frontend_photo}
+% \end{figure}
+% It comprises eight 10-bit power and frequency (up to \SI{24}{MS/s}) scalable pipeline ADCs and the necessary
+% auxiliary components.
+% A micro-graph of the prototype is shown in Figure~\ref{fig:frontend_photo}.
+%
+% A dedicated ASIC development is ongoing for BeamCal~\cite{6200898}
+% with a special option for a fast readout of an reduced amount of
+% information from each bunch-crossing to be used for a fast feedback system for beam-tuning.
+% A prototype of a pixel sensor readout for the pair monitor, positioned in front of BeamCal was designed in SoI
+% technology~\cite{Sato201153}.
+
+% \subsection{Test-beam Results}
+% Several test-beam campaigns were done to investigate the performance of single fully instrumented sensor planes,
+% both for LumiCal and BeamCal.
+% Prototypes of sensor planes assembled with FE and ADC ASICs,
+% as shown in Figure~\ref{fig:fcal_lumical_module_photo},
+% were built using LumiCal and BeamCal sensors~\cite{1748-0221-7-01-T01004}.
+% \begin{figure}[hbp]
+% \centering
+% \includegraphics[width=0.35\columnwidth,angle=90]{Calorimeter/FCAL/figs/tb3_complete_module}
+% \caption{Photograph of LumiCal readout module with sensor connected.}
+% \label{fig:fcal_lumical_module_photo}
+% \end{figure}
+% The detector plane prototypes were installed in an electron beam and
+% the trajectories of beam particles were measured by four planes of a silicon strip
+% telescope.
+% The front-end electronics outputs were sampled synchronously with the
+% beam clock, a mode used at the ILC.
+% \begin{figure}[htpb]
+% \centering
+%   \includegraphics[width=0.45\columnwidth]{Calorimeter/FCAL/figs/StoN_AmplitudeMethod_TB11} \hfill
+%   \includegraphics[width=0.45\columnwidth]{Calorimeter/FCAL/figs/hit_map_area1}
+%   \caption{Left: The signal-to-noise ratio of all readout channels.
+%           Right: Distribution of the predicted impact points on pads with a color coded signal.}
+% \label{fig:sinalnoise}
+% \end{figure}
+% Data were taken for different pads and also for regions covering pad boundaries.
+% Signal-to-noise ratios
+% of better than 20 are measured for beam particles both for LumiCal and BeamCal sensors,
+% as illustrated in Figure~\ref{fig:sinalnoise}~(left).
+% The impact point on the sensor is reconstructed from the telescope information.
+% Using a color code for the signals on the pads
+% the structure of the sensor becomes nicely visible, as also seen in Figure~\ref{fig:sinalnoise}~(right).
+% The sensor response was found to be uniform over the pad area and to drop by about 10\% in the
+% area between pads.
+
+\subsubsection{Mechanical Stack}
+
+A flexible mechanical structure, as shown in  Figure~\ref{fig:mechanical_structure}, has been built as part of the AIDA I project at CERN,
+to compose a technological
+calorimeter prototype instrumented both with LumiCal and BeamCal sensors.
+Tungsten absorber plates, glued on a permaglass
+frame, are precisely
+positioned on a rod assembly, and interspersed with fully assembled sensor planes.
+\begin{figure}[hbp]
+\centering
+\includegraphics[width=0.6\columnwidth,]{Calorimeter/FCAL/figs/mechanical_structure_2}
+\caption{Photograph of the flexible mechanical structure. Tungsten absorber plates, glued on permaglass frames, are put into slots of the
+rod assembly.}
+\label{fig:mechanical_structure}
+\end{figure}
+The flatness of the absorber plates is better than \SI{50}{\micro\meter} to allow for highly compact packing of sensor and absorber planes. This stack will be completed
+with absorber plates of the necessary quality up to a total thickness of 30 radiation length. JINR Dubna compares the quality
+of samples from
+different suppliers using a highly precise 3D position measuring device and X-rays.
+
+\subsubsection{Technological Calorimeter Prototype}
+
+Currently the goal of FCAL is to prepare a calorimeter prototype for test-beam measurements. These measurements
+are essential firstly to develop and test engineering solutions to build a very compact calorimeter and
+secondly to verify the results of Monte Carlo studies. Depending on the test beam
+results the calorimeter may be redesigned.
+For the prototype calorimeter
+a mechanical structure, a sufficient amount of front-end and ADC ASICs, FPGAs for
+data concentration and
+a data acquisition system are needed. In addition,
+two-planes of a pixel tracker in front of LumiCal will be prepared to improve the polar angle resolution.
+
+
+
+\subsubsection{Alignment and Position Monitoring }
+
+A laboratory set-up for position monitoring has been constructed by IFJPAN Cracow using semi-transparent
+silicon sensors. Test measurements demonstrated that position monitoring with \si{\micro\meter} precision is possible.
+
+\subsubsection{Front-End and ADC ASICs}
+
+
+To match the requirements of extremely low power consumption and taking into account possible radiation
+fields in the very forward region, a new development of the front-end and ADC ASICs in deep sub-micron
+\SI{130}{nm} CMOS technology has been
+pursued within AIDA by UST Cracow.
+These ASICs will be sufficiently fast to be used both in LumiCal and BeamCal.
+The overall readout architecture, so far successfully produced in \SI{350}{nm} CMOS technology and used in the test-beam
+measurements as described above, has not been changed and comprises separated front-end
+and ADC ASICs for each readout channel.
+\begin{figure}[hbp]
+\centering
+    \includegraphics[width=0.45\textwidth]{Calorimeter/FCAL/figs/FE_ASIC.png} \hfill
+	\includegraphics[width=0.45\textwidth]{Calorimeter/FCAL/figs/ADC_ASIC_2.png}
+	\caption{Left: 8 channel FE ASIC in \SI{130}{nm} technology.
+		 	 Right: ADC ASIC in \SI{130}{nm} technology.}
+    \label{fig:ASIC_ADC}
+\end{figure}
+For both FE and ADC ASICs prototypes, shown in Figure~\ref{fig:ASIC_ADC}, are under test.
+A dedicated ASIC development is ongoing for BeamCal~\cite{6200898}
+with a special option for a fast readout of a reduced amount of
+information from each bunch-crossing to be used for a fast feedback system for beam-tuning~\cite{1748-0221-3-10-P10004}.
+A prototype of a pixel sensor readout for the pair monitor, positioned in front of BeamCal was designed in SoI
+technology~\cite{Sato201153}.
+
+
+\subsubsection{Data Concentrator and DAQ}
+In order to operate a large amount of sensor planes the readout has to be orchestrated.
+For this purpose a FPGA based data concentrator is foreseen
+which may deliver data in the so called AIDA protocol. The design of this device is currently under discussion.
+The higher level DAQ will depend on the functionality of the data concentrator.
+For the readout of test-beam data  software is developed, mainly by the University of Tel Aviv,
+which can be easily adopted.
+For a final device FCAL will follow the developments of a common DAQ for all detectors.

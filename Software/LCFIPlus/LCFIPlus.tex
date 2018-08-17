@@ -1,0 +1,14 @@
+\section{LCFIPlus}
+
+\subsection{Introduction}
+The LCFIPlus package~\cite{Suehara:2015ura} builds upon the previous heavy flavor identification software, LCFIVertex~\cite{Bailey:2009ui} to offer algorithms for jet clustering, secondary vertex reconstruction, and heavy quark flavor tagging. With respect to the previous version, specifically the reconstruction of multi-jet signatures, such as those encountered in the Higgs self-coupling analysis has been improved. This is achieved partly by first reconstructing secondary vertices, then clustering the event into jets taking into account the reconstructed objects. This strategy effectively prevents the splitting of secondary decays across multiple jets. LCFIPlus uses multivariate classifiers for the flavor tagging.
+
+\subsection{Recent Milestones}
+Recent major developments have focused on improving statistical methods for flavor tagging. Other developments include improvements to the interface to simplify the performance tuning for different detectors.
+Additionally, the development infrastructure was modernized to facilitate collaboration; the code is now hosted on github.
+
+\subsection{Engineering Challenges}
+Future challenges include integration with new geometry descriptions. Additionally, improvements are needed to the CPU performance, particularly the scaling behavior for large number of tracks.
+
+\subsection{Future Plans}
+Current developments focus on further improving the flavor tagging performance by using advanced reconstruction methods. Adaptive vertex fitting methods can further increase the efficiency of finding secondary vertices. Additionally, incorporating particle identification information from the tracking detectors, and adding information from \Ppizero reconstruction allow to improve the vertex mass and hence the flavor tagging performance.

@@ -1,0 +1,21 @@
+\section{Marlin}
+
+\subsection{Introduction}
+Marlin\cite{Gaede2006177} is a C++ application framework for processing LCIO event data files. Marlin applications are configured with XML files. Software modules --- called processors --- have their own section in the configuration file, where all parameters local to the processor are defined. By design every parameter has to be registered by the author including a short documentation, which allows a Marlin application to provide a complete and fully documented example configuration file. The LCIO event data model is used as a so called internal data bus (or whiteboard), i.e.\ every Marlin processor can read its input collection(s) from the LCIO file and create one or more output collections.
+
+\subsection{Recent Milestones}
+As Marlin is at the core of the the data processing software for the Linear Collider community, an effort has been made to keep it stable and robust. It is used by ILD, CLICdp and SiD, as well as by almost all test beam collaborations in the context of the Linear Collider. Wherever possible, new features have been added in a backwards compatible way, such that existing steering files would work as before. Some of the improvements that have been recently added to Marlin are:
+\begin{itemize}
+	\item The addition of command line parameters, where every parameter present in the XML file can be overwritten on the command line --- useful for scripting and bulk processing;
+	\item optionally the LCIO collections that are read from the file can be limited, possibly resulting in greatly improved processing speed;
+	\item introduction of the global flag \texttt{AllowToModifyEvent} to allow corrections or additions to input data collections.
+\end{itemize}
+
+\subsection{Engineering Challenges}
+There were no major engineering challenges involved in the development and maintenance of Marlin. As pointed out above, the main challenge laid in keeping Marlin stable, usable and robust. Adopting Marlin to parallel processing and multithreading, which is planned for the near future, will however be a very complex and challenging process, where we will need to learn from the work done by the LHC experiments in this context.
+
+\subsection{Future Plans}
+The improvement of the core functionality as well as the development of new features in Marlin will continue over the next years. Making Marlin capable of processing several events in parallel in order to make better use of new multi-core hardware will be the most demanding new development in the near future. Additional requirements and requests brought forward by the user community will be addressed.
+
+\subsection{Applications Outside of Linear Colliders}
+Even though Marlin as well as LCIO have Linear Collider in their names, both are rather generic software tools that can and actually are used outside of the LC community. For example the EUTelescope software framework is based on Marlin and is used by Atlas and CMS groups in the context of the detector upgrade R\&D program.

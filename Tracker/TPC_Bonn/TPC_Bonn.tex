@@ -1,0 +1,63 @@
+% \documentclass[11pt,a4paper]{report}
+% \setlength{\topmargin}{1cm}
+% \usepackage{units}
+% \usepackage{textcomp} %to use gensymb with true type font
+% \usepackage{gensymb}
+% \usepackage{graphicx}
+% \usepackage{graphics}
+% \usepackage{booktabs}
+% \usepackage{tabularx}
+% \usepackage{latexsym}
+% \usepackage{url}
+% \usepackage{amssymb}
+% \usepackage{geometry}
+% \usepackage{lscape}
+% \usepackage{adjustbox}
+% \usepackage{caption}
+% \usepackage{subcaption}
+% \usepackage{amsmath}
+% \PassOptionsToPackage{hyphens}{url}
+%
+% \graphicspath{{plots/}}
+
+
+% \begin{document}
+%\maketitle
+% \tableofcontents
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Main part
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Detectors for a high energy linear electron positron collider have been discussed since the early 1990's. For the main tracking a TPC was proposed early on.
+The advantages of a TPC are its ability to detect track elements in 3 dimensions while introducing very small amounts of dead material. A potential disadvantage could be the appearance of distortions due to $E \times B$ effects in the drift region, originating from possibly inhomogeneous magnetic or electric fields, which could be a consequence of the construction or from space-charge build-up as a result of ion back-flow.
+
+In 1996, the first Linear Collider detector conceptual report \cite{Settles:1997wj} considered the possibility to read out the end-cap chambers with MSGC, Micromegas and GEMs. Several advantages of the MPGDs were recognized immediately: the ion back-flow could be very limited by a suitable choice of the field configuration, and the $E \times B$ effects present close to the wires of a MWPC are very limited in the case of the microscopic structure of a MPGD. However it was also recognized that, to profit from the
+excellent resolution allowed by a limited diffusion and a very localized avalanche, either sufficiently small pads would be needed, to share the charge among several pads, or a mechanism for spreading the avalanche was needed. Without such a sharing, the only information obtained would have been which pad received the charge, and the hit position would have a flat probability over the pad width, limiting the resolution along a pad row to $p/\sqrt{12}$, $p$ being the pitch over a pad row. It was also
+understood that for a multi-stage GEM, the amount of natural spreading by diffusion in the gas amplification device itself, about $\SI{300}{\micro m}$ r.m.s., was sufficient to obtain enough charge spreading with $\sim\SI{1}{mm}$ wide pads. For Micromegas, where the avalanche has typically a $\SI{15}{\micro m}$ r.m.s., an
+additional charge-spreading mechanism was necessary, even for \SI{1}{mm} pads. Such a method was introduced by the Carleton group, using a superposition of an insulator and a resistive cover. This arrangement provides a continuous Resistor-Capacitance (RC) network over the surface which spreads the charge around the avalanche. The induced
+signal is measured, shaped and digitized by the electronics connected to each pad. Note that this technique is applicable also to GEMs and allows pad widths of 2, 3 or more mm.
+
+At the beginning of the years 2000, several small prototypes were built in Aachen, Amsterdam, Saclay-Orsay with a Berkeley electronics, DESY, Munich, Karlsruhe, Carleton, Victoria, Saga, KEK, Tsinghua, to study various aspects of the GEM and Micromegas technology. Ion feed-back was studied, resolution was measured in various prototypes, and the possible gases were studied. The fundamental proof was made that a TPC with MPGD readout can be operated stably, and can reach intrinsically the anticipated resolutions.
+
+Then, in 2004, part of the nascent collaboration gathered around a \SI{5}{GeV} pion beam and cosmic-ray tests at KEK. The detector was immersed in a \SI{1}{T} magnetic field from a permanent-current superconducting magnet. The \SI{25}{cm} drift field cage was designed in Munich and electronics was recuperated from ALEPH. Several endplates were adapted to this cage with wires, Micromegas (without resistive foil) and GEM technologies. In 2006 the Carleton \SI{16}{cm} drift length prototype with a Micromegas resistive foil took data simultaneously with the Munich prototype.
+
+At the same time other developments took place in other institutes. Noteworthy was the use of 2 parallel laser beams in Victoria and later at DESY to study 2-track separation. This study showed that a separation of two tracks was possible down to 1 pad size distance between the laser beams.
+
+Several groups carried out tests in a \SI{5}{T} magnet at DESY in the years 2003-2007. The operation in such high fields could be established for both Micromegas and for GEMs, and the extrapolation of the resolutions previously measured at lower fields could be demonstrated.
+
+The next step then was the construction and operation of a common large prototype. The European Union - funded project EUDET allowed a facility to be built at DESY, with a 1T SC magnet offered by KEK, a field cage designed at DESY, an endplate brought by Cornell, a cosmic trigger with SiPMs built by Saclay, a beam trigger from Nikhef, a gas system from DESY and Rostock, high density readout electronics by Saclay and Lund, etc..
+
+The endplate has 7 openings to receive up to 7 identical modules. The ``keystone'' shape of the modules is chosen to be as close as possible to the anticipated real configuration of a disc paved by concentric rows of modules. Data taking started in 2008 in the fixed magnet. At this time, to shoot the beam at a given z position along the drift axis was possible only by sliding the TPC in the  magnet; this way, the large drift distances could only be obtained by taking the TPC in a very inhomogeneous field. This was solved the following years by the installation of a moving stage allowing horizontal and vertical translations, as well as rotations in the horizontal plane. Rotation of the TPC around the  magnet axis could be performed by hand.
+
+Since then beam tests took place nearly every year, alternating between GEMs from Japan, Micromegas, GEMs from DESY, and pixels.
+
+%\include{asian_gems}
+%\include{standard_gems}
+\include{Tracker/TPC_Bonn/GEM}
+\include{Tracker/TPC_Bonn/micromegas}
+\include{Tracker/TPC_Bonn/pixel}
+\include{Tracker/TPC/TPC}
+\include{Tracker/TPC_Bonn/gating}
+\include{Tracker/TPC_Bonn/electronics}
+\include{Tracker/TPC_Bonn/mechanics}
+% \include{bibliography}

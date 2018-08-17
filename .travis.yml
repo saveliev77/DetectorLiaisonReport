@@ -1,0 +1,15 @@
+sudo: required
+dist: trusty
+services: docker
+script:
+- wget https://raw.githubusercontent.com/blang/latex-docker/master/latexdockercmd.sh
+- chmod +x latexdockercmd.sh
+- "./latexdockercmd.sh latexmk -cd -lualatex -bibtex -silent -f --synctex=1"
+deploy:
+  provider: releases
+  api_key:
+    secure: Nc4h565UvTRdbBj/l9JxjLzU9m+7vagRrrzEHPZDO/yuNKjbfh4r3i9R7Umomy96TylXuX3IeESkoHDcHZ34Y2pc3a08lN351opk8tWysAe+uHHLs1HO8gMA5FVv1UQ6K3wWFXKLjYVJ9JaviTZ3GO5O6jlqQ1xWbLk7sk9Y+LVrOs3EIEvu1dwahziKO2T5rMwcPmD7jOnr+R8+AwGsCWzOCN+G3N+h4GFnxH+bwViINbIwBliRQV5aLI4nS5LQPARA/rjw7voTETBA/QbzJdNI2cQ3p2TfGpPb+OIlDxezegFkuFSDwhpnzrbRk19zSwkXgB3Wj2F2HaRgoTTUt4KW8GzH28uvad1v41KdPbeVtK6oY66RJy6sciCTqOdoTwat+tsLdemAJrmMTvSyM/Np4v7bBbN6v4+DAxzreWysKy85/bkjGnL1akc7Vn0Kn3Qt/zq6l+UM9687minK5I4KDsqxv45LHumuxu8qnxYlBYicUqvdEAlYjnUJ9eZjYPs8pxQyr2xZrKIj4f7T0aWRo4eHREEjsryI4Btv8ryj9/mtmIlAVcyWmRXoBkNjsMdU5k09IcVlGJsPQQIl4+XJFmFR1xbCCulPUzoT05Zf/3jF4yfqeTZEOTs7Bz3m8wiCO8WvCuwVqpoqh8Bwb+R8kT9itmbyJjEIBYm1qO4=
+  file: lcDetectorRnD.pdf
+  on:
+    repo: linearcollider/DetectorRnD_report
+    tags: true

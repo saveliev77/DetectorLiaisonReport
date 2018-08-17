@@ -1,0 +1,23 @@
+\section{Introduction}
+Software for the simulation and reconstruction of detectors at Linear Colliders addresses the following needs of the community:
+\begin{itemize}
+	\item Studies of detectors with several technology options within the sam e framework.
+	\item Reconstruction in highly granular calorimeters with a goal of 3-5\% jet energy resolution.
+	\item Flavor tagging of b-, c-, and gluon jets in multi-jet events.
+	\item Support of beam tests of detector prototypes as well as large-scale physics and detector simulation studies.
+\end{itemize}
+
+The center piece of the Linear Collider software infrastructure is the LCIO event data model and persistence format. The well-controlled evolution of the data format enabled the creation of reconstruction packages that can be shared by all collaborations in the Linear Collider community.
+
+The software packages are well adapted to studying a variety of different detector models, as necessary for thorough detector optimization studies. The detector description facilitates quick changes to the detector layout, such as different sizes or positions for a given sub-detector. At the same time, it allows the addition of new readout schemes, sensitive materials, or geometries.
+
+Starting from simple algorithms borrowed from previous experiments, the reconstruction packages have been incrementally improved on an as-needed basis, in parallel with improvements to the detail of the detector simulation. They now feature sophisticated strategies and state-of-the-art algorithms for pattern recognition and track and vertex reconstruction, and the most advanced particle flow algorithms available.
+
+The following packages have been developed:
+\begin{itemize}
+	\item LCIO -- Event data model and file format
+	\item LCFIPlus -- Vertex reconstruction and flavor tagging
+	\item PandoraPFA -- Pattern recognition, calorimeter reconstruction and particle flow algorithms
+	\item Marlin -- Event reconstruction framework
+	\item DD4HEP -- Detector description for simulation and reconstruction
+\end{itemize}

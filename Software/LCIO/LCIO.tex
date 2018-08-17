@@ -1,0 +1,27 @@
+\section{LCIO}
+
+\subsection{Introduction}
+
+The LCIO software toolkit~\cite{lcioWebsite} provides an event data model
+(EDM) and persistency format for physics and detector
+simulations. It was developed as a joint effort and has
+been adopted by all of the detector concepts for both ILC and CLIC. Many of the sub-detector R\&D groups (e.g. CALICE and LCTPC) have also adopted LCIO for both their simulation needs and for testbeam data. The
+software toolkit consists of an Application Programming Interface (API) with implementations in Java and C++ and a binding to python.
+\subsection{Recent Milestones}
+The LCIO EDM and API have been stable for several years. Recent developments have focused on bug fixes and minor usability improvements, updates to keep the code up to date with the C++11 standard and with ROOT6, and migration of the code to github. In addition to the existing bindings to C++, Java, Python, and FORTRAN, a binding to the Julia programming language has been developed recently.
+\subsection{Engineering Challenges}
+The LCIO EDM has been used successfully in beam test campaigns of several detector R\&D groups, as well as in large simulation production and analysis campaigns. Based on this experience, and based on experience with other accelerator-based experiments, possible incremental changes to the EDM to accommodate new use cases should be easy to implement.
+
+The I/O layer, on the other hand, is quite simplistic at the moment, and is in particular not optimized for parallel I/O. As parallelization and vectorization of software codes increases to run more efficiently on modern compute hardware, this layer will most likely need to be completely re-designed to support these use cases. Possible improvements could include parallel I/O to take advantage of parallel hardware without having to split the files into unmanageably small chunks, different memory layout of the collections to facilitate vectorization (structures of arrays rather than the current arrays of structures), and the change to a de-facto standard data format, e.g. HDF5, to facilitate exploring non-HEP data analysis tools and to improve knowledge transfer with other scientific communities.
+
+\subsection{Future Plans}
+Continued development of LCIO will be driven by user demand and developers' resources.
+
+\subsection{Applications Outside of Linear Colliders}
+The Heavy Photon Search experiment at Thomas Jefferson National Laboratory
+has adopted LCIO as its event data model and data persistency format. Physics
+and detector studies for CLIC and the Muon Collider have also used LCIO.
+The Whizard~\cite{whizardWebsite} event generator uses LCIO as a possible output format for Monte Carlo events. This could lead
+to its integration into other experiments. Because of its simple and
+well-documented persistency format LCIO is a perfect candidate for HEP data
+archiving applications.

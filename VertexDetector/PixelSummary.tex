@@ -1,0 +1,125 @@
+\thispagestyle{empty}
+\newgeometry{margin=1.5cm} % modify this if you need even more space
+\begin{landscape}
+    \centering
+    \begin{adjustbox}{max width=1.1\textwidth,totalheight=1\textheight}
+\begin{tabularx}{2\textheight}{lXXXX}
+    \toprule
+    R\&D Technology & Participating Institutes & Description / Concept & Milestones & Future Activities \\
+    \midrule
+        ChronoPix &
+        University of Oregon\newline Yale University\newline Sarnoff Corporation &
+        ChronoPix is a monolithic CMOS pixelated sensor with the ability to record up to two time stamps per pixel during the bunch train. Hits are read out in the time between bunches. &
+        April 2014: Device tests of prototype 2 inform the design of prototype 3 to be submitted to foundry &
+        Prototype 3 was manufactured in September 2014. Tests have shown that problems revealed in prototype 2 were solved. \\
+    \midrule
+        CMOS MAPS &
+        IPHC Strasbourg \newline DESY, Hamburg \newline University of Bristol \newline University of Frankfurt &
+        The CMOS pixel sensor uses as a sensitive volume the \SIrange{10}{20}{\micro\meter} thin high-resistivity epitaxial Si-layer deposited on low resistivity substrate of commercial CMOS processed chips. The generated charge is kept in a thin epi-layer atop the low resistivity silicon bulk by potential wells that develop at the boundary and reaches an n-well collection diode by thermal diffusion. &
+        2016 : production of CPS for the ALICE-ITS upgrade\newline
+        2018/19 : production of CPS for the micro-vertex detector of the CBM experiment at FAIR/GSI\newline
+        2018/19 : validation of light double-sided ladder concept combining highly granular sensors on one side with timestamping sensors on the other side\newline
+        $< 2020$ : validation of power pulsing of double-sdied ladders inside a high magnetic field\newline
+        2022/23 : finalisation of the R\&D on various CPS adapted to the different layers of a very high performance vertex detector at the ILC &
+        Until 2018-2019: Development and production of CPS for the ALICE-ITS and CBM-MVD \newline Development of various CPS optimised for the different layers of a vertex detector at the ILC, with emphasis on bunch tagging \newline Development of low material double-sided ladders \\
+    \midrule
+        DEPFET &
+        University of Barcelona, Spain \newline
+        University of Bonn, Germany \newline
+        Heidelberg University, Germany \newline
+        Giessen University, Germany \newline
+        University of G{\"o}ttingen \newline
+        KIT Karlsruhe, Germany\newline
+        IFJ PAN, Krakow, Poland \newline
+        MPI Munich \newline
+        MPG HLL Munich, Germany \newline
+        Charles University, Prague, Czech Republic \newline
+        IFIC, CSIC-UVEG, Valencia, Spain \newline
+        DESY, Hamburg, Germany \newline
+        IFCA, CSIC-UC, Santander, Spain &
+        The DEPFET technology implements a single active element within the active pixel by integrating a p-MOS transistor in each pixel on the fully depleted, detector-grade bulk silicon. Additional n-implants near the transistor act as a trap for charge carriers created in the substrate (internal gate), so that they are collected beneath the transistor gate. &
+        2014: Full-scale \SI{75}{\micro\meter} thin Belle II ladder in beam test at DESY &
+        Development of die-attach technology \newline
+        Full-scale test of all ASICs on ladder \newline
+        Integration of read-out and steering ASICs on pixel sensor using flip-chip technique and microscopic solder ball bump-bonding \newline
+        Production of Belle II vertex detector modules\newline
+        Tests of the last version of the DHP chips \newline
+        Engineering design for all-silicon module with petal geometry required for ILC\newline
+        Detailed characterization of device response \newline
+        Design of ancillary ASICs, taking full responsibility for future design cycles of the FE read-out chip, called Drain Current Digitizer \\
+    \midrule
+        FPCCD &
+        KEK \newline
+        Shinshu University \newline
+        Tohoku University \newline
+        JAXA, Japan Aerospace Exploration Agency &
+        Fine Pixel CCD sensors have pixel sizes of \SI{5}{\micro\meter} and a fully depleted epitaxial layer with a thickness of \SI{15}{\micro\meter} &
+        Fabrication of real size ($\SI{12.3}{mm} \times \SI{62.4}{mm}$) sensors with \SI{50}{\micro\meter} total thickness \newline
+        Neutron irradiation of a small ($\SI{6}{mm} \times \SI{6}{mm}$) FPCCD sensor \newline
+        Construction of a prototype cooling system and demonstration of cooling between \SI{-40}{\degreeCelsius} and \SI{+15}{\degreeCelsius} &
+        Characterization of FPCCD sensors including beam tests and radiation damage studies \newline
+        Development of FPCCD sensors with a pixel size of \SI{5}{\micro\meter} \newline
+        Construction of prototype ladders for the inner layers of a vertex detector \newline
+        Development of readout electronics downstream of ASICs \newline
+        Development of larger FPCCD sensors and prototype ladders for outer layers \newline
+        Development of readout electronics with a small footprint \newline
+        Construction of a real size engineering prototype and cooling test \\
+    \midrule
+        3D Pixels &
+        Brown University \newline
+        Cornell University \newline
+        Fermilab \newline
+        Northern Illinois University \newline
+        SLAC \newline
+        University of Illinois Chicago &
+        3D technology allows very fine pitch (\SI{4}{\micro\meter}) integration of sensors with multiple layers of electronics, allows interconnection oto both the top and bottom of devices, and provides techniques for low mass, thinned devices. &
+        Completed multi-year effort to demonstrate commercial 3D technology, consisting of \SI{0.13}{\milli\meter} CMOS interconnected with Direct Oxide bonding technology and access using TSV. \newline
+        Received readout wafers with thickness of \SI{25}{\micro\meter}, processed with TSV and DBI to connect to 3D electronics \newline
+        Currently working on active edge demonstrator devices &
+        Complete the 3D active edge project \newline
+        Apply concepts to x-ray imaging devices \newline
+        Re-start ILC developments pending renewed funding \\
+    \midrule
+        SOI &
+        KEK\newline
+        University of Tsukuba \newline
+        Tohoku University \newline
+        Osaka University &
+        In the Silicon-On-Insulator (SOI) technology the sensing and processing functionalities are separated in different layers; the sensing is provided by a high-resistive substrate connected through an insulating layer with the processing layer. &
+        &
+        Sep 2014: Complete architecture study for the ILC pixel detector \newline
+        Mar 2015: Design and fabrication of first test chip for the ILC \newline
+        Dec 2015: Beam test of the chip \\
+    \midrule
+        CLICPix
+        &
+        Cambridge University\newline
+        CERN\newline
+        University of Geneva\newline
+        Karlsruhe Institute of Technology (KIT)\newline
+        University of Liverpool\newline
+        SLAC\newline
+        Institute of Space Science Bucharest\newline
+        Spanish Network for Linear Colliders
+        &
+        Hybrid pixel-detector technology comprising fast, low-power and small-pitch readout.
+        ASICs implemented in \SI{65}{nm} CMOS technology (CLICpix) coupled to ultra-thin planar
+        or active HV-CMOS sensors via low-mass interconnects.
+        &
+        Beam tests of prototype assemblies with ultra-thin sensors (\SIrange{50}{300}{\micro\meter})\newline
+        CLICpix demonstrator ASIC in \SI{65}{nm} technology\newline
+        Beam tests of assemblies with capacitive coupling between CCPDv3 HV-CMOS active sensors
+        and CLICpix ASICs\newline
+        Power-pulsing demonstrator with dummy loads\newline
+        Prototypes of carbon-fibre ladder supports\newline
+        Full-scale thermal mockup of the CLIC vertex-detector region
+        &
+        Demonstration modules for all major components
+        in time for the next update of the European Strategy
+        for Particle Physics in 2018/19
+        \\
+    \bottomrule
+\end{tabularx}
+\end{adjustbox}
+\end{landscape}
+\restoregeometry

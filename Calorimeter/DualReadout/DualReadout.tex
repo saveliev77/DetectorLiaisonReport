@@ -1,0 +1,218 @@
+\section{DualReadout}
+Contact person: John Hauptman (email:  hauptman@iastate.edu)
+
+
+The scientific goal of the RD52/DREAM collaboration [1] is to understand the fundamental limitations
+to hadronic energy resolution and, in general, the limitations to achieving high-quality calorimetric
+performance with Gaussian energy resolution, mean response linearity, and ease and precision of calibration.
+
+\begin{wrapfigure}{R}{0.6\columnwidth}
+ \centering
+ \includegraphics[scale=0.26]{f32-fibers.jpg}
+  \includegraphics[scale=0.26]{f33-pisa-module.jpg}
+   \label{fig:pisa}
+ \caption{Fiber geometry (top) and INFN Pisa copper modules (bottom).}
+\end{wrapfigure}
+
+
+Our latest (and final) results indicate that a copper absorber matrix loaded uniformly in volume with 1 mm diameter
+fibers of two kinds (scintillating and clear, for \C light generation) is an excellent choice for a collider detector that 
+can reconstruct the four-vectors of $W \rightarrow q\bar{q}$ and  $Z \rightarrow q\bar{q}$ decays.  The simplicity of the construction of such a calorimeter is shown in Fig. \ref{fig:pisa}.  The fiber-copper geometry is shown at the top.  The upstream beam entry is shown in the middle, and the downstream readout of the separate bundles of  scintillating and \C fibers is shown at the bottom.  This module was built at INFN Pisa.
+
+The essential features of  fiber dual-readout calorimeters are (a) near-perfect optical conduits (fib\-ers)
+for extraction of the optical signal from the interior of the calorimeter mass to exterior photo-convert\-ers, 
+(b) fine spatial sampling on the mm-scale, (c) dual measurement of scintillation light in scintillating
+fibers (all charged particles) and simultaneous \C light in clear fibers (predominantly electromagnetic
+particles), (d) nearly absolute fiber-absorber volume uniformity, (e) good lepton identifications, (f) measurement of the neutron content of showers, and (g) equal response to pions and protons (and presumably kaons).
+ 
+ 
+\begin{wrapfigure}{r}{0.65\columnwidth}
+ \centering
+ \includegraphics[scale=0.18]{groom-plot-projs.jpg}
+  \caption{Illustration of a dual-readout calorimeter.  Electromagnetic events cluster around $S/E\approx C/E \approx 1$,
+  while hadronic events are distributed along the line from \fem=0 to \fem = 1.  The projections onto the $S/E$ and $C/E$
+  axes show the resolutions of the corresponding single-readout scintillation sampling and \C sampling calorimeters.}  
+  \label{fig:groom}
+\end{wrapfigure}
+
+ 
+ A copper absorber of $10 ~\lambda_{\rm Int}$ depth with embedded scintillation ($S$) and \C ($C$) fibers achieves
+ all of these goals:  Gaussian hadronic energy response,  linear mean response from 20-300 GeV, 
+  robust calibration with single electrons into each geometrical volume, 
+  equal response to pions and protons, 
+  excellent mass resolution on hadronic decays of the $W$ and $Z$,
+  in addition to very good $e^{\pm}$ -  $\pi^{\pm}$  and  $\mu^{\pm}$ -  $\pi^{\pm}$ separation.  
+ 
+ 
+ 
+ The simplicity of a fiber dual-readout module is shown in Fig. \ref{fig:pisa} of a fiber-copper module built at INFN Pisa.  
+ Apart from great care taken in the copper forming procedure (tolerances of 10 $\mu$m on the copper grooves), the 
+ construction is straightforward:  stack one copper plate with grooves, fill the grooves with alternating $S$ and $C$ fibers,
+ then lay down the next copper plate.  Each fiber is protected inside the 1.1-mm deep groove.   The fiber groove geometry
+ is shown in the figure at the top.   
+ 
+About 30 dual-readout papers are published in {\it Nucl. Intrs. Meths.}, {\it Rev. Sci. Instr.}, and {\it JINST}, including
+dual-readout in several crystals, in a planar geometry, as well as in several fiber geometries. We have built
+and tested both Pb-based and Cu-based dual-readout modules.   
+
+
+
+Hadronic events of energy $E$ (initiated by $\pi^{\pm}, K, p$, or jets) shower in this copper-fiber structure and develop scintillation ($S$) and 
+\C ($C$) signals given by the sum of their respective electromagnetic and non-electromagnetic components:
+
+\begin{displaymath}
+  S = E [ \fem + (1 - \fem) \cdot \eta_S ]
+\end{displaymath}
+
+\begin{displaymath}
+  C = E [ \fem + (1 - \fem) \cdot \eta_C ]
+\end{displaymath}
+
+\noindent where the $\eta_S$ and $\eta_C$ are constants determined by the structure of the calorimeter (number of S fibers, number of C fibers, volume ratios of fiber to copper, etc.), and are the ratio of the mean hadronic response to the mean electromagnetic response.  The fraction of each event that is electromagnetic, \fem, is measured directly event-by-event by the ratio $C/S$, and this electromagnetic fraction \fem ~ varies from \fem = 0 at $S/C = (1-\eta_S)/(1-\eta_C)$ to \fem=1 at $S/C=1$.
+
+All hadronic events fall on the line joining \fem=0 to \fem=1, as illustrated in Fig. \ref{fig:groom}.  The projections 
+onto the $S/E$ and $C/E$   axes show the resolutions of the corresponding single-readout scintillation sampling and \C sampling calorimeters, while the dual-readout resolution is the projection along the perpendicular to this line, and
+  this shows the fundamental reason that dual-readout calorimeters have intrinsic good energy resolution.
+
+
+
+
+
+
+\subsection{Recent Milestones}
+
+\subsubsection{Neutrons in GEANT}            \label{sec:geant}  
+
+
+\begin{wrapfigure}{r}{0.4\columnwidth}
+ \centering
+ \includegraphics[scale=0.20]{f41-geant.jpg}
+ \label{fig:hp}
+ \caption{(a) GEANT4 regular hadronic simulation compared to the (b) GEANT ``high precision'' simulation.}
+\end{wrapfigure}
+
+
+In the early days of DREAM, the GEANT3 simulations did not accord well with the DREAM data.  Recently, Sehwook Lee
+at Kyungpook National University has simulated the RD52 calorimeters (both the small modules we've built and the large
+5-6 tonne module we have not been able to build) with the ``high precision'' version of GEANT4.  The difference in simulated dual-readout calorimeter response is shown in Fig. \ref{fig:hp}.  This is a huge difference in energy resolution, from 4.6\% down to 3.2\%, due solely to the version of GEANT4
+being used.    It is clear that neutron measurement is critical to 
+dual-readout for the same reason it is critical to a compensating calorimeter.
+
+
+
+The is a large difference and we believe it derives from a more correct treatment of the neutrons and their transport, including the proper treatment of neutron and proton spallation processes and the the treatment of binding energy losses during the violent disassembly of a nucleus.   Note that in (a) the mean is 90.17 GeV (resolution 4.6\%) out of 100 GeV incident pion, and in (b) the mean energy is 95.59 GeV (resolution 3.2\%).  I suspect that a further improved treatment of neutrons will recover this additional 4\% in energy with a consequent improvement of the energy resolution.   On 4th, we used FLUKA which is known to treat neutrons explicitly correctly (LANL codes) and we achieved the correct mean response and a resolution at 100 GeV of about 2.9\%.
+
+Note that this single result (in the absence of a constant term) implies a hadronic energy resolution of
+\begin{displaymath}
+  \sigma / E \approx 32\% / \sqrt{E}.  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\end{displaymath}
+The same simulation at a range of energies is shown in Fig. \ref{fig:eres}, from which it is clear that these dual-readout calorimeters can achieve (in simulation) a raw energy resolution of about $\sigma/E \approx 30\% / \sqrt{E}$ with a negligible constant term.  (Note bene:  it is easy to get a small constant term in a simulation, but much more difficult in an actual device.)
+
+
+
+\subsubsection{Equal response to pions and protons}     \label{sec:pi-p}
+
+
+
+\begin{wrapfigure}{r}{0.60\columnwidth}
+ \centering
+ \includegraphics[scale=0.09]{f42-pion-proton.jpg}
+ \label{fig:pi-p}
+ \caption{Dual-readout of pion and proton responses.}
+\end{wrapfigure}
+
+
+
+ In a dual-readout calorimeter, hadronic events with differing
+electromagnetic fraction are distributed along the line in Fig. \ref{fig:groom} between \fem=0 and \fem=1.  Proton-initiated
+showers have fewer pions, and  fewer neutral pions, due to baryon conservation, and  therefore a lower response in both $S$ and $C$ but,
+nevertheless. the dual-readout solution is the same for both as seen in Fig. \ref{fig:pi-p}.  This is important for jet energy resolution as the baryon  
+content of jets varies.  The same will likely be true of kaon-initiated showers, but we have not measured this. 
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+\subsubsection{Simulated energy resolution}                \label{sec:Eres}  
+
+The same simulation of high-precision GEANT4 was run at pion energies of 50, 80, 90, 100 and 200 GeV in a large
+copper-fiber calorimeter with Gaussian fitted  means and resolutions, displayed in Fig. \ref{fig:eres} and in the table,
+
+\bigskip
+
+\begin{tabular}{ r r r }
+$E_{\rm beam}$   &  Mean         &  $\sigma/E$ \\
+   (GeV    &   (GeV)       &   \\
+\hline
+ & & \\
+ 50    &    47.85   & 4.4 \% \\
+ &&\\
+ 80   & 76.46     &  3.5 \% \\
+ &&\\
+ 90  & 85.95    &   3.4 \% \\
+ &&\\
+ 100  & 95.42  &  3.2 \% \\
+ &&\\
+ 200  & 190.2  &  2.5 \% \\
+ &&\\
+ \end{tabular}
+
+\bigskip
+
+ It is observed that the response is Gaussian and linear, although the mean response is low by about 5\%.  This (I believe) is due to an insufficiently accurate treatment of the neutrons in GEANT4 (high precision version, FTFP\_BERT\_HP).
+
+
+\begin{figure}[h!]
+ \centering
+ \includegraphics[scale=0.6]{eres.jpg}
+  \caption{Energy resolution from GEANT-HP at 50, 80, 90, 100, and 200 GeV.}
+  \label{fig:eres}
+\end{figure}
+
+
+\subsubsection{$W$ and $Z$ hadronic decays}
+
+The main goal of a electron-positron collider at  Higgs and top production running is the direct and high-precision reconstruction of  $W \rightarrow q\bar{q}$ and  $Z \rightarrow q\bar{q}$ decay four-vectors.   This is obvious, and will increase the efficiency of $W,Z$ events for physics analysis by large factors of 10-100, depending on the final states.
+
+We have used DREAM data events taken in the ``interaction jet'' trigger to assembly di-jet events distributed as $W$ and $Z$ Breit-Wigner line shapes by adjusting the space angle between the two measured beam particles, $\theta_{12}$, 
+\begin{displaymath}
+   M^2 = 2 E_1 E_2 ( 1 - \cos \theta_{12}),
+\end{displaymath}
+then using the measured hadronic showers in the two events to reconsrtuct the energies, $E_1$ and $E_2$, and angles of the two showers.  The results of this exercise on event files at beam energies of 50, 100, and 200 GeV are shown in 
+Fig. \ref{fig:wz}, where the $W$ events and the $Z$ events are superposed.
+
+\begin{figure}[ht]
+ \centering
+ \includegraphics[scale=0.45]{WZ-Dream-data-all.jpg}
+  \caption{Hadronic decays $W \rightarrow q\bar{q}$ and  $Z \rightarrow q\bar{q}$ assembled for DREAM beam events as described in the text.}
+  \label{fig:wz}
+\end{figure}
+
+
+\subsection{Engineering Challenges}
+
+
+There are two main challenges before a dual-readout calorimeter can be incorporated into a collider detector \cite{cepc}:
+
+\begin{description}
+
+\item Construct wedges (trapezoids) so that a $4 \pi$ geometrical volume can be filled hermetically.   This have been done in the 4th concept design \cite{4th} as shown in Fig. \ref{fig:hcalor}, and is being done again in the CEPC design (R. Ferrari).  This problem was also addressed with respect to the SPACAL calorimeter in RD1 at CERN.
+
+\item Develop photo-converters that will work in a magnetic field.  We have tested SiPMs (see M. Caccia, CEPC meeting, May 2018).  In addition to eliminating the fiber bundles at the rear of the calorimeter (Fig. \ref{fig:pisa}), SiPMs would allow on to build an ``em'' section in front of a ``hadronic'' section.  We do not believe this is necessary for either lepton ID or general calorimeter performance, but it becomes an option. 
+ 
+ \end{description}
+ 
+ 
+\begin{wrapfigure}{r}{0.6\columnwidth}
+ \includegraphics[scale=0.35]{hcalor.eps}
+ \label{fig:hcalor}
+ \caption{The 4th Concept \cite{4th} calorimeter geometry.   This geometry was fully simulated. }
+\end{wrapfigure}
+
+\subsection{Future Plans}
+
+We have no future plans, since RD52 has been completed.  See all RD52 papers \cite{dream}. The only possible plan would be to built a 5-6 tonne copper-fiber module to test for all aspects at a collider, e.g., wedges, $4 \pi$ geometry, energy resolution, particle ID, photo-converter readout.  
+%We have never had the funding to do this.

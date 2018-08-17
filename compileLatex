@@ -1,0 +1,7 @@
+#!/bin/bash
+if [ -e /afs/cern.ch/sw/XML/texlive/latest/bin/x86_64-linux/pdflatex ]
+then
+    export PATH=/afs/cern.ch/sw/XML/texlive/latest/bin/x86_64-linux:${PATH}
+fi
+export PATH=/usr/local/texlive/2018/bin/x86_64-darwin:${PATH}
+latexmk -cd -lualatex -bibtex -silent -f --synctex=1

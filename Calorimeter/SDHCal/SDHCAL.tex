@@ -1,0 +1,87 @@
+\section{Micromegas SDHCAL}
+Most recent update: 2016-11-20 \\
+Contact person: Max Chefdeville (email: chefdevi@lapp.in2p3.fr)
+\subsection{Introduction}
+The Micromegas R\&D is primarily intended for Particle Flow calorimetry at future linear colliders. It focuses on hadron calorimetry with large-area Micromegas segmented in very small readout cells of $1\times\SI{1}{cm^{2}}$. This granularity provides unprecedented imaging capability which can be exploited to improve the measurement of jet energy. Past and current R\&D efforts are described with emphasis on achievements since the publication of the ILC Detailed Baseline Design.
+
+
+\subsection{Hadron calorimeter design}
+
+The design of calorimeters at a future linear collider is optimised for the reconstruction of jets with a Particle Flow method. The SiD HCAL will be segmented in cells of $1\times \SI{1}{cm^2}$. With a total instrumented area of $\SI{3000}{m^{2}}$, the number of readout channels will reach $30\times 10^{6}$. This unprecedented granularity can be achieved with gas detectors, thin PCBs and embedded front-end ASICs.
+
+In addition, calorimeters will be placed inside the solenoid magnet to insure good matching of electron and charged hadron tracks with their energy deposits in the ECAL and HCAL. To limit cost, a very compact mechanical design is mandatory: e.g. the SiD HCAL would feature 40 layers within $\sim\SI{110}{cm}$. This design relies on very thin active layers to achieve fine sampling ($\sim 0.1 \lambda_{int}$ / layer) and good hadron energy resolution ($\sim 50\% / \sqrt{E}$). The targeted active layer thickness and length in the barrel HCAL modules are \SI{8}{mm} and \SI{3}{m} respectively. To minimise dead zones, readout boards will be placed at the two ends of the barrel modules. Along the beam direction, ASIC will be daisy chained and PCBs connected together with flat connectors and cables.
+
+Active cooling of the active layers is extremely challenging with this design. Instead, it is considered to limit heat dissipation and gradients inside the calorimeters by power-pulsing the front-end circuitry. Power-pulsing is possible because of the particular time structure of the ILC beam. This structure also drives the design of the ASICs which will be self-triggered. During collisions, signals will be processed and stored in memory with a timestamp synchronous to the ILC clock. Between bunch trains, memories are first read out, then the ASIC are turned off. With an ILC duty-cycle of 0.5\%, the power consumption can be reduced down to \SI{10}{\micro\watt} / channel.
+
+\subsection{Recent Milestones}
+
+\subsubsection{The SDHCAL}
+
+The SDHCAL is a prototype of imaging hadron calorimeter equipped with 50 layers of gaseous detectors of $1\times \SI{1}{m^{2}}$ interleaved by steel absorbers (Figure~\ref{sdhcal} (left)). Each detectors is segmented in pads of $1\times\SI{1}{cm^{2}}$ and the processed pad signal is coded over 2-bits (Figure~\ref{sdhcal} (right). The number of readout channels per layer imposes to integrated the front-end electronics directly on the gaseous detector printed-circuit-boards (PCB). Several CALICE groups are involved in this project.
+
+\begin{figure}
+\begin{centering}
+\includegraphics[width=0.95\textwidth]{Calorimeter/SDHCal/test}
+\caption{SDHCAL prototype in a beam line at the SPS at CERN (left). Event display of a \SI{150}{GeV} pion shower measured in a Micromegas prototype after $2 \lambda_{int}$ of steel (right), the color indicates the threshold passed: red for 1, blue for 2 and green for 3.}
+\label{sdhcal}
+\end{centering}
+\end{figure}
+
+
+\subsubsection{The $1\times\SI{1}{m^{2}}$ Micromegas prototype}
+
+\paragraph{Mechanics}
+The Micromegas layers for the SDHCAL are made out of 6 high-voltage units installed together inside a gaseous chamber (Figure~\ref{mecha_elec} (right)). Each unit is an 8 layer PCB with a Bulk Micromegas mesh, readout pads and front-end ASICs; it is dubbed Active Sensor Unit (or ASU). A drift gap of \SI{3}{mm} is defined by spacers and a frame. Spacers are inserted in between ASUs, resulting in an inactive area of 2\%.
+
+
+\begin{figure}
+\begin{centering}
+\includegraphics[width=0.45\textwidth]{Calorimeter/SDHCal/interconnects}
+\includegraphics[width=0.45\textwidth]{Calorimeter/SDHCal/m2_assembly}
+\caption{Photographs of interconnections between 2 Active Sensor Units (left) and a $1\times \SI{1}{m^{2}}$ Micromegas prototype during assembly showing 6 of these units and a drift cover (right).}
+\label{mecha_elec}
+\end{centering}
+\end{figure}
+
+
+\paragraph{Electronics}
+Electronics connections to the DAQ as well as services (power cables, gas pipes) are provided on one side of the prototype. ASU-to-ASU connections are therefore mandatory and are made with dedicated connectors and flexible cables (Figure~\ref{mecha_elec} (left)). They are used to distribute clocks and supply power to the ASICs, high voltage to the meshes, to configure the ASICs and read out data. Prior to assembly, 4 ASUs were chained and functional electronic tests were successfully performed. These key features make the design of the $1\times \SI{1}{m^{2}}$ Micromegas prototype fully scalable to the required size of a HCAL module at a future LC (at most \SI{2}{m} in the SiD detector concept).
+
+\paragraph{Noise and detection efficiency}
+A few prototypes were constructed~\cite{Adloff201390} and extensively tested in beam at CERN~\cite{Adloff:2014qea}. Noise conditions were excellent both during standalone tests and inside the CALICE SDHCAL. ASIC thresholds can be lowered down to about 20\% of a minimum ionising particle (MIP) signal at a typical running gas gain of 1500. Efficiency in excess of 95\% are easily reached while keeping a pad multiplicity below 1.1 for MIPs. The actual charge threshold is as low as \SIrange{1}{2}{fC}; it is achieved on ASIC test-boards as well as once mounted on ASUs. The contribution of the PCB internal capacitances to the overall detector noise is therefore negligible.
+
+\paragraph{Standalone performance}
+Thanks to a precise control of the gas gaps and electronics settings, ASIC-to-ASIC variations of efficiency are below the percent in all tested prototypes. Although the statistics is low, the construction process seems reproducible. Stability with rate in high-energy hadron showers is excellent. Except occasional sparks, no effect of beam rate was observed on the pion response up to roughly 30 kHz beam rate; which was the highest rate during the tests. The measured spark probability lies in the range of $10^{-6} \ldots 10^{-5}$ per showering pion at a running gas gain of 1500.
+
+\subsubsection{Resistive prototypes}
+
+While the Bulk Micromegas mesh is made of steel wires and is very resistant to sparking, sensitive front-end ASICs can suffer irreversible damage. Protections in the form of current-limiting diodes networks soldered on PCB were proved so far efficient. To simplify the PCB design and possibly reduce the overall detector cost, it is however desirable to get rid of diodes. It is well known that sparks can be suppressed by means of resistive coatings on the anode pad plane. This solution is used with great success in tracking detectors. Because it modifies the signal development, it needs some adaptation to calorimetry so as to preserve linearity and keep a narrow pad response function for Particle Flow reconstruction.
+
+
+\begin{figure}
+\begin{centering}
+\includegraphics[width=0.45\textwidth]{Calorimeter/SDHCal/splam_eff}
+\includegraphics[width=0.45\textwidth]{Calorimeter/SDHCal/splam_rate}
+\caption{Pad multiplicity versus efficiency to \SI{3}{GeV} electrons for 2 resistive and 1 non-resistive (or standard) Micromegas prototypes (left). Efficiency dependence on rate in a resistive prototype for 3 values of threshold (right). The electron beam spot is $\sim 2\times \SI{2}{cm^{2}}$.}
+\label{resistive}
+\end{centering}
+\end{figure}
+
+First resistive designs using resistive strips and pads were implemented on small size prototypes. In a mixture of Ar/\ce{CO2}, full suppression of sparking was demonstrated up to gas gain in excess of $10^{4}$. At comparable gas gains, resistive and non-resistive prototypes show similar response to traversing charged particles, reaching high efficiency and low pad multiplicity. Compared to non-resistive ones, the evacuation of charge is slowed down in resistive prototypes which are thus subject to rate-dependent drops of gas gain. Expected efficiency losses have been observed at (\SI{3}{GeV} electrons) rates in excess of $\SI{10}{kHz/cm^{2}}$. This limit is compatible with the resistivity of the coated material. At lower rates, it could be shown that the linearity of a Micromegas calorimeter to electrons is not affected by the resistive coatings, up to \SI{5}{GeV}, which was the maximum energy available during the testbeam campaign.
+
+\subsection{Engineering Challenges}
+
+\subsection{Detector R\&D plans for the coming years}
+
+Plans for the coming years include maintaining a commitment to linear collider detector R\&D and possibly seek new applications. Despite a decline of resources, an R\&D program to optimise resistive Micromegas for calorimetry is established. Linearity, rate capability and spark protection in dense electromagnetic showers will be checked up to high-energy and for detector designs with a large variety of resistivity and geometry. These measurements will be necessary to validate the resistive Micromegas technology for calorimetry at a future LC. Also, the on-going R\&D for high-luminosity LHC (HL-LHC) detector upgrades are an appealing perspective. In particular, the possibility to equip the backing part of the CMS forward calorimeter is being investigated. Such high-rate application will put strong stability constraints on resistive Micromegas, making the optimisation work mentioned above even more relevant.
+
+\begin{figure}[hbp]
+\begin{centering}
+\includegraphics[width=0.45\textwidth]{Calorimeter/SDHCal/splam_linearity}
+\includegraphics[width=0.45\textwidth]{Calorimeter/SDHCal/g4reso_sdhcal}
+\caption{Electron response of a virtual Micromegas SDHCAL deduced from measurements of longitudinal shower profiles in non-resistive (z=1 and z=3) and resistive (z=2) Micromegas prototypes placed behind increasing thicknesses of passive material (left). Geant4 calculation of the energy resolution to pions of a Micromegas DHCAL of 30 to 100 layers based on simple hit counting (right).}
+\label{future}
+\end{centering}
+\end{figure}
+
+On a longer term and if resources are sufficient, a Micromegas calorimeter prototype should be constructed so its performance can be compared to concurrent detector technologies. Some performance have already been studied with Monte Carlo simulation, the minimal prototype dimensions are known as well as its cost. This final step of the project naturally comes after optimisation of the resistive coating and would complete the R\&D on Micromegas calorimetry.
