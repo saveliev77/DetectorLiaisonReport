@@ -65,15 +65,74 @@
 }
 
 \begin{document}
-\begin{titlepage}
-    \begin{center}
-        \textbf{\huge Detector R\&D Report}\\
-        \vspace{1.5cm}
-        \textbf{\Large Editors}\\
-        \textbf{\Large Jan Strube\qquad Maxim Titov} \\
-        jan.strube@pnnl.gov\qquad maxim.titov@cea.fr \\
-    \end{center}
+
+
+\begin{titlepage} 
+    PNNL-27609
+    \vfill
+    \newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for horizontal lines, change thickness here
+	\center % Centre everything on the page
+	
+	%------------------------------------------------
+	%	Headings
+	%------------------------------------------------
+	
+	\textsc{\LARGE Linear Collider Collaboration}\\[1.5cm] % Main heading such as the name of your university/college
+		
+%	\textsc{\large Minor Heading}\\[0.5cm] % Minor heading such as course title
+	
+	%------------------------------------------------
+	%	Title
+	%------------------------------------------------
+	
+	\HRule\\[0.4cm]
+	
+	{\huge\bfseries Detector Liaison Report}\\[0.4cm] % Title of your document
+	
+	\HRule\\[1.5cm]
+
+    \textsc{\Large Version 2018.1}\\[0.5cm] % Major heading such as course name
+
+	%------------------------------------------------
+	%	Author(s)
+	%------------------------------------------------
+	
+	\begin{minipage}{0.4\textwidth}
+		\begin{flushleft}
+			\large
+			\textit{Detector Liaison}\\
+            Maxim \textsc{Titov} 
+		\end{flushleft}
+	\end{minipage}
+	~
+	\begin{minipage}{0.4\textwidth}
+		\begin{flushright}
+			\large
+			\textit{Deputy Detector Liaison}\\
+			Jan F \textsc{Strube}
+		\end{flushright}
+	\end{minipage}
+		
+	%------------------------------------------------
+	%	Date
+	%------------------------------------------------
+	\vfill\vfill\vfill % Position the date 3/4 down the remaining page
+	{\large\today} % Date, change the \today to a set date if you want to be precise
+	
+	%------------------------------------------------
+	%	Logo
+	%------------------------------------------------
+	
+	\vfill\vfill
+    \includegraphics[width=0.4\textwidth]{signature_red2-cmyk.eps}\\[1cm] % Include a department/university logo
+    %\includegraphics[width=0.15\textwidth]{logo_red2-cmyk.eps}\\[1cm] % Include a department/university logo 
+    %\includegraphics[width=0.2\textwidth]{logotype_red2-cmyk.eps}\\[1cm] % Include a department/university logo 	 
+	%----------------------------------------------------------------------------------------
+	
+	\vfill % Push the date up 1/4 of the remaining page
+	
 \end{titlepage}
+
 \tableofcontents
 \chapter{Vertex Detectors}
 \input{VertexDetector/Motivation}
