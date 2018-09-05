@@ -76,28 +76,22 @@ Large area GaAs sensors, as shown in Figure~\ref{fig:Calorimeter:FCAL:GaAs}, wer
 and produced in collaboration with partners in industry. The Liquid Encapsulated
 Czochralski technology is used. The sensors were
 doped by a shallow donor (Sn or Te),
-and then compensated  with Chromium.
-% \begin{figure}[hbp]
-%     \centering
-%     \includegraphics[width=0.8\columnwidth]{Calorimeter/FCAL/figs/GaAs_sensor_new}
-%           \caption{A GaAs pad sensor developed for BeamCal.}
-%     \label{fig:Calorimeter:FCAL:GaAs}
-% \end{figure}
+and then compensated with Chromium.
 \begin{figure}
     \centering
     \includegraphics[width=.7\textwidth]{Calorimeter/FCAL/figs/BeamCal}
-    \caption{\color{red} Caption missing}
-    \label{fig:Calorimeter:FCAL:BeamCalChips}
+    \caption{Left: A GaAs pad sensor developed for BeamCal. Right:CVD diamond sensors}
+    \label{fig:Calorimeter:FCAL:GaAs}
 \end{figure}
 \begin{figure}
     \centering
     \includegraphics[width=.4\textwidth]{Calorimeter/FCAL/figs/Hamamatsu_chip}\qquad
     \includegraphics[width=.4\textwidth]{Calorimeter/FCAL/figs/LumiCal}
-    \caption{\color{red} Caption missing}
+    \caption{Left: LumiCal Sensors. Right:LumiCal ASIC}
     \label{fig:Calorimeter:FCAL:LumiCal}
 \end{figure}
-This results in a semi-insulating GaAs material with a resistivity of about $[10^7]{\Omega m}$.
-The sensors are \SI{0.5}{mm} thick with pads of a few mm$^2$ area. The operation voltage is about \SI{100}{V} with
+This results in a semi-insulating GaAs material with a resistivity of about \SI{1e7}{\ohm \meter}.
+The sensors are \SI{0.5}{mm} thick with pads of a few \si{\square\milli\meter} area. The operation voltage is about \SI{100}{V} with
 leakage current per pad less than \SI{500}{nA}.
 
 Prototypes of LumiCal sensors have been designed
@@ -105,7 +99,7 @@ and manufactured by Hamamatsu
 Photonics.
 Their shape is a ring segment of 30$^\circ$.
 The thickness of the n-type silicon bulk is \SI{0.320}{mm}.
-The pitch of the concentric p$^+$ pads is \SI{1.8}{mm} and
+The pitch of the concentric $\text{p}^+$ pads is \SI{1.8}{mm} and
 the gap between two pads is \SI{0.1}{mm}.
 The bias voltage for full depletion ranges between 39 and \SI{45}{V},
 and the leakage currents per pad are below \SI{5}{nA}~\cite{eudet2009}.
@@ -114,7 +108,7 @@ Dedicated ASICs were designed choosing
 an
 architecture~\cite{Boie1982365,Gatti:1986qq}
 comprising a charge sensitive amplifier and a shaper.
-ASICs, containing 8 front--end channels, were designed and fabricated in \SI{0.35}{\micro\meter} CMOS technology.
+ASICs, containing 8 front-end channels, were designed and fabricated in \SI{0.35}{\micro\meter} CMOS technology.
 A variable gain in both the charge amplifier and
 the shaper is implemented by a mode switch. The peaking time of the shaper output signal is \SI{60}{ns}.
 More results of the measurements of the performance were published elsewhere~\cite{4600902}.
@@ -237,102 +231,6 @@ edgeless silicon sensors is under preparation. Using edgeless sensors in LumiCal
 in gaps between sensor segments.
 
 
-
-% \subsubsection{Sensors and ASICs}
-% Large area GaAs sensors, as shown in Figure~\ref{fig:GaAs}, were developed
-% and produced in collaboration with partners in industry. The Liquid Encapsulated
-% Czochralski technology is used. The sensors were
-% doped by a shallow donor (Sn or Te),
-% and then compensated with Chromium.
-% \begin{figure}[hbp]
-% \begin{center}
-%     \includegraphics[width=0.8\columnwidth]{Calorimeter/FCAL/figs/GaAs_sensor_new.jpg}
-%   \end{center}
-%           \caption{A GaAs pad sensor developed for BeamCal.}
-%     \label{fig:GaAs}
-% \end{figure}
-% This results in a semi-insulating GaAs material with a resistivity of about $\SI{10^7}{\Omega m}$.
-% The sensors are \SI{0.5}{mm} thick with pads of a few mm$^2$ area. The operation voltage is about \SI{100}{V} with
-% leakage current per pad less than \SI{500}{nA}.
-%
-% Prototypes of LumiCal sensors have been designed
-% and manufactured by Hamamatsu
-% Photonics.
-% Their shape is a ring segment of 30$^\circ$.
-% The thickness of the n-type silicon bulk is \SI{0.320}{mm}.
-% The pitch of the concentric p$^+$ pads is \SI{1.8}{mm} and
-% the gap between two pads is \SI{0.1}{mm}.
-% The bias voltage for full depletion ranges between 39 and \SI{45}{V},
-% and the leakage currents per pad are below \SI{5}{nA}~\cite{eudet2009}.
-%
-% Dedicated ASICs were designed choosing
-% an
-% architecture~\cite{Boie1982365,Gatti:1986qq}
-% comprising a charge sensitive amplifier and a shaper.
-% ASICs, containing 8 front--end channels, were designed and fabricated in $\SI{0.35}{\micro\meter}$ CMOS technology.
-% A micro-graph of the prototype, glued and bonded on the PCB, is shown Figure~\ref{fig:frontend_photo}.
-% A variable gain in both the charge amplifier and
-% the shaper is implemented by a mode switch. The peaking time of the shaper output signal is \SI{60}{ns}.
-% More results of the measurements of the performance were published elsewhere~\cite{4600902}.
-% A dedicated low-power, small-area, multichannel ADC is designed and produced~\cite{6156491}.
-% \begin{figure}[hbp]
-% \begin{center}
-%  \begin{tabular}{rrr}
-%     \includegraphics[width=0.4\columnwidth]{Calorimeter/FCAL/figs/fcal_lumical_fe_photo}
-%      &~~~~~~&
-%  \includegraphics[width=0.4\textwidth,height=0.28\textwidth]{Calorimeter/FCAL/figs/adc_asic_photo.png} \\
-%
-% \end{tabular}
-%    \end{center}
-%           \caption{Left: Micrography of front-end ASIC.
-%                Right: Micrography of ADC ASIC.}
-%     \label{fig:frontend_photo}
-% \end{figure}
-% It comprises eight 10-bit power and frequency (up to \SI{24}{MS/s}) scalable pipeline ADCs and the necessary
-% auxiliary components.
-% A micro-graph of the prototype is shown in Figure~\ref{fig:frontend_photo}.
-%
-% A dedicated ASIC development is ongoing for BeamCal~\cite{6200898}
-% with a special option for a fast readout of an reduced amount of
-% information from each bunch-crossing to be used for a fast feedback system for beam-tuning.
-% A prototype of a pixel sensor readout for the pair monitor, positioned in front of BeamCal was designed in SoI
-% technology~\cite{Sato201153}.
-
-% \subsection{Test-beam Results}
-% Several test-beam campaigns were done to investigate the performance of single fully instrumented sensor planes,
-% both for LumiCal and BeamCal.
-% Prototypes of sensor planes assembled with FE and ADC ASICs,
-% as shown in Figure~\ref{fig:fcal_lumical_module_photo},
-% were built using LumiCal and BeamCal sensors~\cite{1748-0221-7-01-T01004}.
-% \begin{figure}[hbp]
-% \centering
-% \includegraphics[width=0.35\columnwidth,angle=90]{Calorimeter/FCAL/figs/tb3_complete_module}
-% \caption{Photograph of LumiCal readout module with sensor connected.}
-% \label{fig:fcal_lumical_module_photo}
-% \end{figure}
-% The detector plane prototypes were installed in an electron beam and
-% the trajectories of beam particles were measured by four planes of a silicon strip
-% telescope.
-% The front-end electronics outputs were sampled synchronously with the
-% beam clock, a mode used at the ILC.
-% \begin{figure}[htpb]
-% \centering
-%   \includegraphics[width=0.45\columnwidth]{Calorimeter/FCAL/figs/StoN_AmplitudeMethod_TB11} \hfill
-%   \includegraphics[width=0.45\columnwidth]{Calorimeter/FCAL/figs/hit_map_area1}
-%   \caption{Left: The signal-to-noise ratio of all readout channels.
-%           Right: Distribution of the predicted impact points on pads with a color coded signal.}
-% \label{fig:sinalnoise}
-% \end{figure}
-% Data were taken for different pads and also for regions covering pad boundaries.
-% Signal-to-noise ratios
-% of better than 20 are measured for beam particles both for LumiCal and BeamCal sensors,
-% as illustrated in Figure~\ref{fig:sinalnoise}~(left).
-% The impact point on the sensor is reconstructed from the telescope information.
-% Using a color code for the signals on the pads
-% the structure of the sensor becomes nicely visible, as also seen in Figure~\ref{fig:sinalnoise}~(right).
-% The sensor response was found to be uniform over the pad area and to drop by about 10\% in the
-% area between pads.
-
 \subsubsection{Mechanical Stack}
 
 A flexible mechanical structure, as shown in  Figure~\ref{fig:mechanical_structure}, has been built as part of the AIDA I project at CERN,
@@ -364,7 +262,6 @@ a mechanical structure, a sufficient amount of front-end and ADC ASICs, FPGAs fo
 data concentration and
 a data acquisition system are needed. In addition,
 two-planes of a pixel tracker in front of LumiCal will be prepared to improve the polar angle resolution.
-
 
 
 \subsubsection{Alignment and Position Monitoring }
