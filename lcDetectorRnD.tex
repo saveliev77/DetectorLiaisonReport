@@ -68,8 +68,6 @@
 
 
 \begin{titlepage} 
-    PNNL-27609
-    \vfill
     \newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for horizontal lines, change thickness here
 	\center % Centre everything on the page
 	
@@ -94,23 +92,34 @@
     \textsc{\Large Version 2018.1}\\[0.5cm] % Major heading such as course name
 
 	%------------------------------------------------
-	%	Author(s)
+	%	Editors
 	%------------------------------------------------
-	
-	\begin{minipage}{0.4\textwidth}
+	\vfill\vfill
+	{\large Editors\\}
+	\begin{minipage}[t]{0.49\textwidth}
 		\begin{flushleft}
 			\large
 			\textit{Detector Liaison}\\
-            Maxim \textsc{Titov} 
+			Maxim \textsc{Titov} \\
+			Institut de Recherche sur les lois Fondamentales de l'Univers (IRFU) \\
+			CEA - Saclay, F-91191 Gif-sur-Yvette Cedex, France\\
 		\end{flushleft}
-	\end{minipage}
-	~
-	\begin{minipage}{0.4\textwidth}
+	\end{minipage}\hfill
+	\begin{minipage}[t]{0.49\textwidth}
 		\begin{flushright}
 			\large
-			\textit{Deputy Detector Liaison}\\
-			Jan F \textsc{Strube}
+			\textit{Detector Liaison}\\
+			Jan F \textsc{Strube} \\
+			Pacific Northwest National Laboratory \\
+			902 Battelle Boulevard \\
+			Richland, WA 99352, USA \\
 		\end{flushright}
+			\begin{flushright}
+				\large
+			University of Oregon \\
+			Center for High Energy Physics \\
+			Eugene, OR 97403, USA
+			\end{flushright}
 	\end{minipage}
 		
 	%------------------------------------------------
@@ -135,29 +144,32 @@
 
 \tableofcontents
 \chapter*{Foreword}
-\section*{Linear Collider Detector R\&D Liaison Charge:}
-The LC Detector R\&D Liaisons ensure productive communication between the Linear Collider Collaboration (LCC) Physics and Detectors Executive Board and detector R\&D groups. The liaisons are in contact with all individual detector R\&D groups relevant to linear colliders to keep track of the overall detector R\&D activities conducted or planned for linear colliders and to periodically compile summaries of the efforts.
+\section*{Linear Collider Detector R\&D Liaison Charge}
+The LC Detector R\&D Liaisons ensure productive communication between the Linear Collider Collaboration (LCC) Physics and Detectors Executive Board and the detector R\&D groups. The liaisons are in contact with all individual detector R\&D groups relevant to linear colliders to keep track of the overall detector R\&D activities conducted or planned for linear colliders and to periodically compile summaries of the efforts.
+
 \section*{Introduction}
-Future accelerator facilities are an indispensable step towards precision determination of the Standard Model parameters, constraining of the potential new physics contributions, or, alternatively precision New Physics studies, given LHC yield a hint of new physics presence. The quest for Higgs boson discovery with the multipurpose ATLAS and CMS detectors at the LHC, imposed major detector instrumentation work, and pulled most of the technologies to their performance limits. With many fundamental physics questions within the experimental reach (e.g., precision studies of the Higgs boson couplings and other new particles discovered at the LHC) at future accelerator facilities, a large R\&D effort is needed to develop new and advanced innovative concepts for radiation detection.
+Future accelerator facilities are an indispensable step towards precision determination of the Standard Model parameters, constraining potential new physics contributions or, alternatively, precision studies of New Physics, pending a hint of new physics at other experiments. The quest for the discovery of the Higgs boson with the multipurpose ATLAS and CMS detectors at the LHC imposed major detector instrumentation work, and brought most of the technologies to their performance limits. With many fundamental physics questions within experimental reach (e.g., precision studies of the Higgs boson couplings and other new particles discovered at the LHC) at future accelerator facilities, a large R\&D effort is needed to develop new and advanced innovative concepts for radiation detection.
 
-The physics potential of future accelerators like the ILC or CLIC represents a tremendous challenge for the performance of the detectors, which is in most cases orthogonal to the main directions of development oriented towards LHC experiments. Rather than emphasizing radiation hardness and rate capability, the demands for resolution (granularity) and material budget on one hand, and an acceptable speed and power consumption on the other hand, exceed significantly what is now state-of-the-art. Such leaps in performance cannot be achieved by simple extrapolation of the known, but only by entering new technological territory in detector R\&D. Several new concepts for silicon sensor integration, such as monolithic devices, are being pursued for pixel tracking, new micro-pattern gas amplification techniques are explored for use in time projection chambers, and the particle-flow approach to calorimetry promises to deliver unprecedented jet energy resolution, to quote just some examples.
+The physics potential of future accelerators like the ILC or CLIC represents a tremendous challenge for the performance of the detectors, which is in most cases orthogonal to the main directions of development focused on the LHC experiments. Rather than emphasizing radiation hardness and rate capability, the demands for resolution (granularity) and material budget on one hand, and an acceptable speed and power consumption on the other hand, exceed significantly what is now state-of-the-art. Large tracking detectors aim at a 10-fold precision improvement, while simultaneously pushing the limits of sensor and electronics integration and lightweight precision mechanics. The particle flow approach to calorimetry drives the design of highly compact and granular devices with a channel density more than 2 orders of magnitude above the most finely segmented LHC detectors. Such leaps in performance cannot be achieved by a simple extrapolation of the known, but only by entering new technological territory in detector R\&D. Several new concepts for silicon sensor integration, such as monolithic devices, are being pursued for pixel tracking, new micro-pattern gas amplification techniques are explored for use in time projection chambers, and particle flow calorimetry, relying on several novel technologies, promises to deliver unprecedented jet energy resolution, to quote just some examples.
 
-Over the past few decades, extensive generic R\&D studies, applicable for any Linear Collider (LC) detector concept, such as ILD, SiD or CLICdp, have been pursued by the concept-independent R\&D groups and within the large collaborations like CALICE, LCTPC and FCAL. This document provides an overview of the past and presently ongoing LC detector R\&D efforts, including those not directly included into the concept groups today, but which might become relevant in the future, with a goal to:
+Over the past few decades, extensive generic R\&D studies, applicable to any Linear Collider (LC) detector concept, such as ILD, SiD or CLICdp, have been pursued by the concept-independent R\&D groups and within large collaborations like CALICE, LCTPC and FCAL. This report provides an overview of the past and presently ongoing detector R\&D efforts, including those not directly included in the concept groups today, but which might become relevant in the future. The main purpose if this document is to summarize the LC R\&D achievements worldwide, followed by a discussion of future milestones, in the belief that improved communications will lead to enhancements in the R\&D programs, with a goal to:
 \begin{itemize}
-	\item “Publicize” the technology and summarize contributions of individual R\&D efforts since ILC DBD and CLIC CDR;
-	\item Provide a “showcase” for the technology, without mentioning about manpower needs and financial resources;
-	\item Provide an entry point for new groups in order to help them to learn the current landscape of the R\&D efforts and the areas where they can contribute.
+\item “Publicize” the technology and provide an update of recent R\&D efforts since the two important milestone documents for each of the projects: the Conceptual Design Report (CDR) for CLIC and the Detailed Baseline Design (DBD) for the ILC;
+\item Provide a “snapshot” for a particular technology, without information about manpower needs and financial resources to reach project milestones. As most detector R\&D groups are highly independent with their own funds, this document is not intended to serve as a guideline to control or coordinate different R\&D efforts, by indicating explicitly potential overlap areas;
+\item Provide an entry point for new groups in order to help them to learn about the current landscape of the LC R\&D efforts and the areas where they might be interested to contribute.
 \end{itemize}
-Therefore, each individual R\&D group has been asked to address 5 points, as inputs to the LC Detector R\&D Liaison report: 
+Every individual group was requested to submit a written report describing five items of their R\&D program, as an input to the LC Detector R\&D Liaison report. Suggested content of these documents is approximately as follows:
 \begin{itemize}
-	\item Introduction. Brief overview of the technology (past R\&D efforts with references);
-	\item Recent developments since ILC DBD / CLIC CDR (to avoid repeating historical data);
-	\item Engineering challenges for a given detector technology in order to encourage new groups to contribute to the engineering aspects and not only to the basic detector R\&D efforts;
-	\item Future Detector R\&D activities in the years to come and the list of collaborating institutes contributing to the given R\&D technology;
-	\item Application of the R\&D outside of ILC with references, if technology is already used.
+\item Introduction. Brief overview of the technology (past R\&D efforts with references);
+\item Recent milestones since ILC DBD and CLIC CDR to avoid description of historical data;
+\item Engineering challenges for a given detector technology in order to encourage new groups to contribute to the engineering aspects and not only to the generic R\&D;
+\item Future plans in the years to come and the list of collaborating institutes contributing to the given R\&D technology;
+\item Application of the R\&D outside of ILC with references, if technology is already used.
 \end{itemize}
-The LC Detector R\&D Liaison report serves as an online documentation, updated on a regular basis, and available to general public and newcomers. It can be uploaded from: \url{http://www.linearcollider.org/P-D/Working-groups/Detector-R-D-liaison}. This report is not meant to be considered as the summary to select between technologies or advertise the most advanced ones, but rather as a general overview of the landscape of different LC R\&D activities.
-\newpage
+The LC Detector R\&D Liaison report serves as an online documentation, updated on a regular basis, and is available to general public and newcomers. The most recent version can be uploaded from: \url{http://www.linearcollider.org/P-D/Working-groups/Detector-R-D-liaison}. This report is not meant to be considered as the summary to select between technologies or advertise the most advanced ones, but rather as a general overview of the landscape of different LC R\&D activities. 
+
+The first version (v2018.1) of the Detector R\&D Liaison report has been released on September 5, 2018. Two more updates are being expected in 2018: one is by the time of the LCWS2018 in Texas and another one in December of 2018, as supplemental information for the LCC documents to be submitted for the European Strategy update.
+
 \chapter{Vertex Detectors}
 \input{VertexDetector/Motivation}
 \input{VertexDetector/CMOS/CMOS}
@@ -179,6 +191,7 @@ The LC Detector R\&D Liaison report serves as an online documentation, updated o
 \input{Tracker/SiTrackingSummary}
 \chapter{Gaseous Trackers}
 % LCTPC collaboration spokesperson: Jochen Kaminski (email : kaminski@physik.uni-bonn.de)
+\input{Tracker/MotivationGaseousTracking}
 \input{Tracker/TPC_Bonn/TPC_Bonn}
 \input{Tracker/TPCSummary}
 \chapter{Calorimeters}
@@ -187,12 +200,12 @@ The LC Detector R\&D Liaison report serves as an online documentation, updated o
 \input{Calorimeter/SiliconTungstenILD/SiliconPads}
 \input{Calorimeter/SiliconTungstenSiD/SiliconTungstenSiD}
 \input{Calorimeter/DECAL/DECAL}
-\input{Calorimeter/DHCAL/DHCAL}
-\input{Calorimeter/GEM_HCAL/GEM_HCAL}
-\input{Calorimeter/THGEM/THGEM}
 \input{Calorimeter/AHCAL/AHCAL}
-\input{Calorimeter/SDHCal/SDHCAL}
 \input{Calorimeter/SDHCAL_GRPC/SDHCAL_GRPC}
+\input{Calorimeter/DHCAL/DHCAL}
+\input{Calorimeter/THGEM/THGEM}
+\input{Calorimeter/GEM_HCAL/GEM_HCAL}
+\input{Calorimeter/SDHCal/SDHCAL}
 \input{Calorimeter/DualReadout/DualReadout}
 \input{Calorimeter/CalorimeterSummary}
 \chapter{Forward Calorimeters}
