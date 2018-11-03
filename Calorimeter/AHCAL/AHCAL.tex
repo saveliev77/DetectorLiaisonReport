@@ -40,7 +40,7 @@ All of these notes except the first appeared in the time since the release of th
 
 The CALICE test beam results are nowadays the primary source of validation for hadron shower simulation, according to Geant 4 representatives, and extremely valuable for other HEP experiments, e.g. at the LHC, as well.
 
-With the first round of data taking with the second-generation full-scale prototype accomplished in May and June 2018, several $10^7$ beam events are available to new analyses, in particular studies including the time domain of hadronic shower evolution.
+With the first round of data taking with the second-generation full-scale prototype~\cite{Sefkow:2018rhp} accomplished in May and June 2018, several $10^7$ beam events are available to new analyses, in particular studies including the time domain of hadronic shower evolution.
 
 We finally note that test beam analysis plays an important role in training our students. Roughly speaking, each paper or note corresponds to one or several PhD theses. It is a distributed effort; the corresponding editors of the papers are from about 10 different groups.
 
@@ -56,7 +56,7 @@ We finally note that test beam analysis plays an important role in training our 
 
 As a consequence of the wide success of SiPM applications in other fields, e.g. in medical imaging, the development of improved sensors is dynamically pursued in industry, and several groups are in close contact with leading producers. Progress has been made in terms of dark rate (see Figure~\ref{fig:Calorimeter:AHCAL:DarkCount}), noise above MIP threshold and dynamic range. For comparison, typical SiPMs in the first generation prototype had a dark rate of about 2 MHz and a cross talk probability of about 25\%. In addition, the samples are much more homogeneous than at the time of the first prototype, which results in a strong simplification of commissioning and calibration procedures.
 
-In the time since the TDR, scintillator tile SiPM units without wave-length shifting fiber have been developed, based on machined and on injection-moulded tiles, individually wrapped in reflector foil. They have been integrated into a partially instrumented absorber stack and tested with beams at DESY and CERN in 2014 -- 2015.
+In the time since the TDR, scintillator tile SiPM units without wave-length shifting fiber have been developed for the integration of SiPMs into the electronics read-out board, as originally proposed in~\cite{Blazey:2009zz}. Following geometry optimization~\cite{2010NIMPA.620..196S,Liu:2015cpe}, the tiles are injection-moulded and wrapped individually in reflector foil. They have been integrated into a partially instrumented absorber stack and tested with beams at DESY and CERN in 2014 -- 2015.
 
 Industrialization of the SiPM and tile design has been addressed, and assembly procedures with industrial facilities such as automatic pick-and-place machines have been established. 
 
@@ -71,13 +71,13 @@ The studies converged on the current design, with photo-sensors integrated in th
 
 \subsubsection{Electronics and active layer integration}
 
-The design of the active layers with integrated read-out ASICs and calibration system had been basically validated in beam tests of a single HCAL layer consisting of four base units (HBUs) at CERN in 2012 and reported in the TDR. An HBU reads $12 \times 12$ tiles with 4 ASICs. The present ASIC belongs to the 2nd generation ROC family used also in ECAL and SDHCAL. An HCAL layer carries interfaces for DAQ, calibration and power supply, which already have a compact design fulfilling space constraints at an ILC detector.
+The design of the active layers with integrated read-out ASICs and calibration system~\cite{6829522} had been basically validated in beam tests of a single HCAL layer consisting of four base units (HBUs) at CERN in 2012 and reported in the TDR. An HBU reads $12 \times 12$ tiles with 4 ASICs. The present ASIC~\cite{1748-0221-6-01-C01098} belongs to the 2nd generation ROC family used also in ECAL and SDHCAL. An HCAL layer carries interfaces for DAQ, calibration and power supply, which already have a compact design fulfilling space constraints at an ILC detector.
 
-The main functional difference between the integrated electronics and that of the physics prototype is the self-triggered operation and on-detector zero-suppression, which implies much higher demands on controlling the noise behavior and ensuring a stable detector response. It is thus mandatory to re-establish the calorimeter performance with a full-scale beam test, including the operation with fast power cycling. However, this is out of reach with present funding levels.
+The main functional difference between the integrated electronics and that of the physics prototype is the self-triggered operation and on-detector zero-suppression, which implies much higher demands on controlling the noise behavior and ensuring a stable detector response. It is thus mandatory to re-establish the calorimeter performance with a full-scale beam test, including the operation with fast power cycling.
 
 Further R\&D in the next years has to be done on the ASIC. The 3rd generation ASIC will have a more robust slow control architecture and possibly channel-wise buffer management, which improves rate capabilities. In parallel, an alternative design of the analog part, which can handle a larger range of sensor, has been finished and needs to be integrated into the read-out board and digital data handling.
 
-\subsubsection{Readout System Integration}
+\subsubsection{System Integration}
 
 \begin{figure}
 	\centering
@@ -86,7 +86,7 @@ Further R\&D in the next years has to be done on the ASIC. The 3rd generation AS
 	\label{fig:Calorimeter:AHCAL:Stack}
 \end{figure}
 
-In parallel to the integration of layers, that of entire stacks or modules has been pursued. Since the TDR release, efforts concentrated on developing a multi-layer DAQ capable of reading larger systems. This was ready for beam tests at CERN in fall 2014. It involves integration of a dedicated module data concentrator (see Figure~\ref{fig:Calorimeter:AHCAL:Stack}), which collects signals from all layers of two phi-sectors for sending them to the off-detector data receiver. The HCAL DAQ has been integrated into the higher level system EUDAQ2 for the purpose of combined beam tests, for example with a tracking device for uniformity studies, or with an ECAL for inter-calibration and combined performance. The same is true for slow control data.
+In parallel to the integration of layers, that of entire stacks or modules has been pursued. Since the TDR release, efforts concentrated on developing a multi-layer DAQ capable of reading larger systems~\cite{Kvasnicka:2017bpx}. This was ready for beam tests at CERN in fall 2014. It involves integration of a dedicated module data concentrator (see Figure~\ref{fig:Calorimeter:AHCAL:Stack}), which collects signals from all layers of two phi-sectors for sending them to the off-detector data receiver. The HCAL DAQ has been integrated into the higher level system EUDAQ2 for the purpose of combined beam tests, for example with a tracking device for uniformity studies, or with an ECAL for inter-calibration and combined performance. The same is true for slow control data.
 
 A power supply system based on commercially available modules has been set up; an alternative custom system with optimized channel density per module is being developed.
 
@@ -96,7 +96,7 @@ It has been demonstrated that temperature-induced variations of the SiPM gain ca
 
 The AHCAL is probably the sub-detector with the largest number of individual components. While the number of electronics boards, layers and interfaces is similar to other ECAL or HCAL options, the large quantity of tiles and SiPMs deserves special attention. This affects production and also quality assurance.
 
-While it would be premature to build up full production infrastructure, already for the second generation full-scale prototype with its 22000 channels, conceptual solutions had to be developed and exercised using demonstrators, which could be seen as prototypes of future installations.
+While it would be premature to build up full production infrastructure, already for the second generation full-scale prototype with its 22000 channels, conceptual solutions had to be developed~\cite{Munwes:2634923} and exercised using demonstrators, which could be seen as prototypes of future installations.
 
 Spot-samples of all 40 SiPM lots, and each one of the 640 ASICs, had undergone semi-automatic testing procedures before soldering the HBUs. Without any further surface treatment, injection-moulded scintillator tiles have been wrapped in laser-cut reflective foil by a robotic procedure and mounted on the HBUs using a pick-and-place machine, after glue dispensing with a screen printer. Cosmic test stands were used to assure the quality of the assembly, to monitor the uniformity of the light yield over the production period and within HBUs, and to obtain an initial MIP calibration.
 
